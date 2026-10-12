@@ -1,0 +1,101 @@
+sweep(pi) started 2026-09-09T20:10:58+02:00 streams=1,2,4,8,16,32,64,128,256,512 reps=3 window=5
+sweep(pi) finished 2026-09-09T20:36:37+02:00
+sweep(pi/W4) started 2026-09-09T20:38:29+02:00 streams=1,2,4,8,16,32,64,128,256,512 reps=3 window=5 W=4 arms=dpp 1|chunker 4
+sweep(pi) finished 2026-09-09T20:50:16+02:00
+sweep(pi/W4idx) started 2026-09-10T11:41:24+02:00 streams=1,2,4,8,16,32,64,128,256,512 reps=3 window=5 W=4 arms=chunker 4
+sweep(pi) finished 2026-09-10T11:46:23+02:00
+sweep(pi/scan) started 2026-09-10T12:54:56+02:00 streams=1,2,4,8,16,32,64,128,256,512 reps=3 window=5 W=4 D=1 arms=chunker 4
+sweep(pi) finished 2026-09-10T12:59:55+02:00
+sweep(pi) finished 2026-09-10T13:53:11+02:00
+sweep(pi/fix) started 2026-09-10T13:54:23+02:00 streams=1,2,4,8,16,32,64,128,256,512 reps=3 window=5 W=4 D=64 arms=chunker 4
+sweep(pi) finished 2026-09-10T13:59:53+02:00
+sweep(pi) started 2026-09-10T16:09:00+02:00 streams=1,2,4,8,16,32,64,128,256,512 reps=3 window=5 W=4 D=64 cap=1000 arms=dpp 1|gprivate 1|gprivate 4|chunker 4
+sweep(pi) finished 2026-09-10T16:35:53+02:00
+sweep(pi/ws) started 2026-09-10T18:35:45+02:00 streams=1,2,4,8,16,32,64,128,256,512 reps=3 window=5 W=4 D=64 cap=1000 arms=dpp 1|gprivate 1|gprivate 4|chunker 4
+sweep(pi) finished 2026-09-10T19:03:38+02:00
+sweep(pi/ws) started 2026-09-10T19:03:38+02:00 streams=1,2,4,8,16,32,64,128,256,512 reps=3 window=5 W=4 D=64 cap=1000 arms=chunker 4
+sweep(pi) finished 2026-09-10T19:09:17+02:00
+sweep(pi/ws2) started 2026-09-23T09:26:13+02:00 streams=1,2,4,8,16,32,64,128,256,512 reps=3 window=5 W=4 D=64 cap=1000 heavy=off burst=off arms=dpp 1|gprivate 1|gprivate 4|chunker 4|rr 1
+2026-09-23T09:26:13+02:00 before dpp k=1 spin=0 throttled=0x0 arm=2400MHz temp=41.1'C gov=ondemand
+2026-09-23T09:30:21+02:00 after dpp k=1 spin=0 throttled=0x0 arm=2400MHz temp=60.9'C gov=ondemand
+2026-09-23T09:30:22+02:00 before dpp k=1 spin=50 throttled=0x0 arm=2400MHz temp=59.3'C gov=ondemand
+2026-09-23T09:32:21+02:00 after dpp k=1 spin=50 throttled=0x0 arm=2400MHz temp=65.3'C gov=ondemand
+2026-09-23T09:32:21+02:00 before gprivate k=1 spin=0 throttled=0x0 arm=2400MHz temp=65.9'C gov=ondemand
+2026-09-23T09:36:35+02:00 after gprivate k=1 spin=0 throttled=0x0 arm=2400MHz temp=59.8'C gov=ondemand
+2026-09-23T09:36:35+02:00 before gprivate k=1 spin=50 throttled=0x0 arm=2400MHz temp=57.6'C gov=ondemand
+2026-09-23T09:38:35+02:00 after gprivate k=1 spin=50 throttled=0x0 arm=2400MHz temp=67.0'C gov=ondemand
+2026-09-23T09:38:35+02:00 before gprivate k=4 spin=0 throttled=0x0 arm=2400MHz temp=65.3'C gov=ondemand
+2026-09-23T09:42:59+02:00 after gprivate k=4 spin=0 throttled=0x0 arm=2400MHz temp=57.1'C gov=ondemand
+2026-09-23T09:42:59+02:00 before gprivate k=4 spin=50 throttled=0x0 arm=2400MHz temp=57.1'C gov=ondemand
+2026-09-23T09:45:00+02:00 after gprivate k=4 spin=50 throttled=0x0 arm=2400MHz temp=62.6'C gov=ondemand
+2026-09-23T09:45:00+02:00 before chunker k=4 spin=0 throttled=0x0 arm=2400MHz temp=61.5'C gov=ondemand
+2026-09-23T09:48:24+02:00 after chunker k=4 spin=0 throttled=0x0 arm=2400MHz temp=61.5'C gov=ondemand
+2026-09-23T09:48:25+02:00 before chunker k=4 spin=50 throttled=0x0 arm=2400MHz temp=62.0'C gov=ondemand
+2026-09-23T09:50:22+02:00 after chunker k=4 spin=50 throttled=0x0 arm=2400MHz temp=67.5'C gov=ondemand
+2026-09-23T09:50:22+02:00 before rr k=1 spin=0 throttled=0x0 arm=2400MHz temp=67.0'C gov=ondemand
+2026-09-23T09:54:16+02:00 after rr k=1 spin=0 throttled=0x0 arm=2400MHz temp=63.7'C gov=ondemand
+2026-09-23T09:54:16+02:00 before rr k=1 spin=50 throttled=0x0 arm=2400MHz temp=62.6'C gov=ondemand
+2026-09-23T09:56:14+02:00 after rr k=1 spin=50 throttled=0x0 arm=2400MHz temp=65.9'C gov=ondemand
+sweep(pi) finished 2026-09-23T09:56:14+02:00
+sweep(pi/ws2) started 2026-09-23T09:56:14+02:00 streams=1,2,4,8,16,32,64,128,256,512 reps=3 window=5 W=4 D=64 cap=1000 heavy=off burst=off arms=chunker 4
+2026-09-23T09:56:15+02:00 before chunker k=4 spin=0 throttled=0x0 arm=2400MHz temp=65.9'C gov=ondemand
+2026-09-23T09:59:39+02:00 after chunker k=4 spin=0 throttled=0x0 arm=2400MHz temp=61.5'C gov=ondemand
+2026-09-23T09:59:39+02:00 before chunker k=4 spin=50 throttled=0x0 arm=2400MHz temp=62.0'C gov=ondemand
+2026-09-23T10:01:36+02:00 after chunker k=4 spin=50 throttled=0x0 arm=2400MHz temp=65.9'C gov=ondemand
+sweep(pi) finished 2026-09-23T10:01:36+02:00
+sweep(pi/ws2_heavy) started 2026-09-23T10:01:36+02:00 streams=1,2,4,8,16,32,64,128,256,512 reps=3 window=5 W=4 D=64 cap=1000 heavy=0.1,4 burst=off arms=dpp 1|gprivate 1|gprivate 4|chunker 4|rr 1
+2026-09-23T10:01:37+02:00 before dpp k=1 spin=0 throttled=0x0 arm=2400MHz temp=65.3'C gov=ondemand
+2026-09-23T10:05:44+02:00 after dpp k=1 spin=0 throttled=0x0 arm=2400MHz temp=62.6'C gov=ondemand
+2026-09-23T10:05:44+02:00 before dpp k=1 spin=50 throttled=0x0 arm=2400MHz temp=60.4'C gov=ondemand
+2026-09-23T10:07:43+02:00 after dpp k=1 spin=50 throttled=0x0 arm=2400MHz temp=65.9'C gov=ondemand
+2026-09-23T10:07:44+02:00 before gprivate k=1 spin=0 throttled=0x0 arm=2400MHz temp=66.4'C gov=ondemand
+2026-09-23T10:11:57+02:00 after gprivate k=1 spin=0 throttled=0x0 arm=2400MHz temp=60.4'C gov=ondemand
+2026-09-23T10:11:57+02:00 before gprivate k=1 spin=50 throttled=0x0 arm=2400MHz temp=59.8'C gov=ondemand
+2026-09-23T10:13:56+02:00 after gprivate k=1 spin=50 throttled=0x0 arm=2400MHz temp=65.3'C gov=ondemand
+2026-09-23T10:13:57+02:00 before gprivate k=4 spin=0 throttled=0x0 arm=2400MHz temp=65.3'C gov=ondemand
+2026-09-23T10:18:16+02:00 after gprivate k=4 spin=0 throttled=0x0 arm=2400MHz temp=57.1'C gov=ondemand
+2026-09-23T10:18:16+02:00 before gprivate k=4 spin=50 throttled=0x0 arm=2400MHz temp=56.5'C gov=ondemand
+2026-09-23T10:18:47+02:00 after gprivate k=4 spin=50 throttled=0x0 arm=2400MHz temp=59.8'C gov=ondemand
+2026-09-23T10:18:47+02:00 before chunker k=4 spin=0 throttled=0x0 arm=2400MHz temp=59.3'C gov=ondemand
+2026-09-23T10:22:11+02:00 after chunker k=4 spin=0 throttled=0x0 arm=2400MHz temp=62.6'C gov=ondemand
+2026-09-23T10:22:11+02:00 before chunker k=4 spin=50 throttled=0x0 arm=2400MHz temp=61.5'C gov=ondemand
+2026-09-23T10:24:08+02:00 after chunker k=4 spin=50 throttled=0x0 arm=2400MHz temp=68.1'C gov=ondemand
+2026-09-23T10:24:09+02:00 before rr k=1 spin=0 throttled=0x0 arm=2400MHz temp=68.1'C gov=ondemand
+2026-09-23T10:28:03+02:00 after rr k=1 spin=0 throttled=0x0 arm=2400MHz temp=62.6'C gov=ondemand
+2026-09-23T10:28:03+02:00 before rr k=1 spin=50 throttled=0x0 arm=2400MHz temp=62.0'C gov=ondemand
+2026-09-23T10:30:01+02:00 after rr k=1 spin=50 throttled=0x0 arm=2400MHz temp=66.4'C gov=ondemand
+sweep(pi) finished 2026-09-23T10:30:02+02:00
+sweep(pi/ws2_burst) started 2026-09-23T10:30:02+02:00 streams=1,2,4,8,16,32,64,128,256,512 reps=3 window=5 W=4 D=64 cap=1000 heavy=off burst=20,20 arms=dpp 1|gprivate 1|gprivate 4|chunker 4|rr 1
+2026-09-23T10:30:02+02:00 before dpp k=1 spin=0 throttled=0x0 arm=2400MHz temp=64.2'C gov=ondemand
+2026-09-23T10:32:09+02:00 after dpp k=1 spin=0 throttled=0x0 arm=1900MHz temp=58.2'C gov=ondemand
+2026-09-23T10:32:09+02:00 before dpp k=1 spin=50 throttled=0x0 arm=1800MHz temp=57.6'C gov=ondemand
+2026-09-23T10:34:08+02:00 after dpp k=1 spin=50 throttled=0x0 arm=2400MHz temp=67.0'C gov=ondemand
+2026-09-23T10:34:09+02:00 before gprivate k=1 spin=0 throttled=0x0 arm=2400MHz temp=66.4'C gov=ondemand
+sweep(pi/ws2_burst) started 2026-09-23T10:41:57+02:00 streams=1,2,4,8,16,32,64,128,256,512 reps=3 window=5 W=4 D=64 cap=1000 heavy=off burst=20,20 arms=dpp 1|gprivate 1|gprivate 4|chunker 4|rr 1
+2026-09-23T10:41:58+02:00 before dpp k=1 spin=0 throttled=0x0 arm=1600MHz temp=45.0'C gov=ondemand
+2026-09-23T10:46:06+02:00 after dpp k=1 spin=0 throttled=0x0 arm=2400MHz temp=62.6'C gov=ondemand
+2026-09-23T10:46:06+02:00 before dpp k=1 spin=50 throttled=0x0 arm=2400MHz temp=60.4'C gov=ondemand
+2026-09-23T10:48:05+02:00 after dpp k=1 spin=50 throttled=0x0 arm=2400MHz temp=67.5'C gov=ondemand
+2026-09-23T10:48:05+02:00 before gprivate k=1 spin=0 throttled=0x0 arm=2400MHz temp=68.6'C gov=ondemand
+2026-09-23T10:52:16+02:00 after gprivate k=1 spin=0 throttled=0x0 arm=2400MHz temp=60.4'C gov=ondemand
+2026-09-23T10:52:16+02:00 before gprivate k=1 spin=50 throttled=0x0 arm=2400MHz temp=59.8'C gov=ondemand
+2026-09-23T10:54:15+02:00 after gprivate k=1 spin=50 throttled=0x0 arm=2400MHz temp=67.5'C gov=ondemand
+2026-09-23T10:54:16+02:00 before gprivate k=4 spin=0 throttled=0x0 arm=2400MHz temp=66.4'C gov=ondemand
+2026-09-23T10:58:34+02:00 after gprivate k=4 spin=0 throttled=0x0 arm=1900MHz temp=56.0'C gov=ondemand
+2026-09-23T10:58:35+02:00 before gprivate k=4 spin=50 throttled=0x0 arm=1900MHz temp=56.0'C gov=ondemand
+2026-09-23T11:00:35+02:00 after gprivate k=4 spin=50 throttled=0x0 arm=2400MHz temp=62.0'C gov=ondemand
+2026-09-23T11:00:35+02:00 before chunker k=4 spin=0 throttled=0x0 arm=2400MHz temp=60.9'C gov=ondemand
+2026-09-23T11:03:59+02:00 after chunker k=4 spin=0 throttled=0x0 arm=2400MHz temp=62.6'C gov=ondemand
+2026-09-23T11:04:00+02:00 before chunker k=4 spin=50 throttled=0x0 arm=2400MHz temp=62.6'C gov=ondemand
+2026-09-23T11:05:57+02:00 after chunker k=4 spin=50 throttled=0x0 arm=2400MHz temp=68.1'C gov=ondemand
+2026-09-23T11:05:57+02:00 before rr k=1 spin=0 throttled=0x0 arm=2400MHz temp=65.9'C gov=ondemand
+2026-09-23T11:09:51+02:00 after rr k=1 spin=0 throttled=0x0 arm=2400MHz temp=62.6'C gov=ondemand
+2026-09-23T11:09:51+02:00 before rr k=1 spin=50 throttled=0x0 arm=2400MHz temp=62.0'C gov=ondemand
+2026-09-23T11:11:49+02:00 after rr k=1 spin=50 throttled=0x0 arm=2400MHz temp=66.4'C gov=ondemand
+sweep(pi) finished 2026-09-23T11:11:49+02:00
+sweep(pi/ws2_heavy) started 2026-09-23T11:11:49+02:00 streams=1 reps=3 window=5 W=4 D=64 cap=1000 heavy=0.1,4 burst=off arms=gprivate 4
+2026-09-23T11:11:50+02:00 before gprivate k=4 spin=0 throttled=0x0 arm=2400MHz temp=66.4'C gov=ondemand
+2026-09-23T11:12:10+02:00 after gprivate k=4 spin=0 throttled=0x0 arm=2400MHz temp=64.8'C gov=ondemand
+2026-09-23T11:12:10+02:00 before gprivate k=4 spin=50 throttled=0x0 arm=2400MHz temp=64.2'C gov=ondemand
+2026-09-23T11:13:51+02:00 after gprivate k=4 spin=50 throttled=0x0 arm=2400MHz temp=62.6'C gov=ondemand
+sweep(pi) finished 2026-09-23T11:13:52+02:00

@@ -1,0 +1,36 @@
+# SPDX-License-Identifier: Apache-2.0
+# Fig1 YSB profiling window: NAIVE arm, InMemory SINGLE PASS (repeat=1 -> window-safe, read
+# nulled), W1 sequential. xlarge (15GB, 80M rows, event_time forward-shifted) so the single
+# pass is ~40s -> long enough to attach perf. Stateful: filter event_type='view' + tumble 30s
+# COUNT per campaign; tiny output (serialize ~0), varsized-heavy input (deser = string copy).
+experiment: {name: fig1_naive_prof_ysb, description: 'Fig1 naive YSB per-stage profiling window', primary_metric: throughput_mbps, higher_is_better: true, repetitions: 1, aggregation: median}
+defaults:
+  system: nebulastream
+  branch: benchmark-piparse-lazyparse-fast-csv
+  mode: worker-cli
+  build: native
+  data_size: xlarge
+  topology: single-node
+  cold_read: false
+  warm_read: true
+  completion_timeout_s: 600
+  worker:
+    query_engine: {number_of_worker_threads: 1, number_of_io_threads: 1, invoke_mode_configuration: fnattr, pin_threads: false, admission_queue_size: 1024}
+    default_query_execution: {operator_buffer_size: 131072, execution_mode: COMPILER}
+    number_of_buffers_in_global_buffer_manager: 16384
+  query_config:
+    source_type: InMemory
+    sink_type: Monitoring
+    input_formatter: {type: SequentialUncompiledOldCSV, threading_mode: sequential}
+    output_formatter: {type: JSONUncompiled}
+    input_parser: {}
+    output_parser: {}
+  generator: {repeat: 1, mode: burst, rate: 1000000}
+  worker_env: {NES_INMEM_PREFILL: '1', NES_INMEM_REPEAT: '1', NES_INMEM_BUFSIZE: '131072', NES_INPUT_CODEC: original, NES_OUTPUT_CODEC: original}
+variants:
+  - name: ysb
+    description: ysb naive inmem single-pass profiling window
+    query: yahoo/ysb_1k_varsized
+    axes: {x: {label: c, explicit: [{name: naive, baseline: true, overrides: {}}]}}
+    y: {metric: throughput_mbps, label: MB/s}
+    visualization: {type: bar_chart}

@@ -1,0 +1,99 @@
+# plugin	category	spec	note
+CSV-in	M	nes-input-formatters/private/CSVInputFormatIndexer.hpp:15-34	includes
+CSV-in	M	nes-input-formatters/private/CSVInputFormatIndexer.hpp:38-79	config params + offsets-per-field
+CSV-in	M	nes-input-formatters/private/CSVInputFormatIndexer.hpp:81-153	CSVMetaData
+CSV-in	M	nes-input-formatters/private/CSVInputFormatIndexer.hpp:155-178	indexer class decl
+CSV-in	M	nes-input-formatters/src/CSVInputFormatIndexer.cpp:15-34	includes
+CSV-in	B	nes-input-formatters/src/CSVInputFormatIndexer.cpp:36-51	TMP DIAGNOSTIC index-CPU counters
+CSV-in	K	nes-input-formatters/src/CSVInputFormatIndexer.cpp:53-114	scalar per-tuple scan (quoted + unquoted)
+CSV-in	M	nes-input-formatters/src/CSVInputFormatIndexer.cpp:116-122	ctor
+CSV-in	K	nes-input-formatters/src/CSVInputFormatIndexer.cpp:124-182	indexRawBuffer buffer walk
+CSV-in	M	nes-input-formatters/src/CSVInputFormatIndexer.cpp:184-205	validateAndFormat + registrars + operator<<
+SIMDCSV-in	M	nes-input-formatters/private/SIMDCSVInputFormatIndexer.hpp:15-64	class decl (reuses CSV config+metadata)
+SIMDCSV-in	M	nes-input-formatters/src/SIMDCSVInputFormatIndexer.cpp:15-37	includes
+SIMDCSV-in	B	nes-input-formatters/src/SIMDCSVInputFormatIndexer.cpp:38-57	TMP DIAGNOSTIC index-CPU counters
+SIMDCSV-in	M	nes-input-formatters/src/SIMDCSVInputFormatIndexer.cpp:59-68	ctor
+SIMDCSV-in	K	nes-input-formatters/src/SIMDCSVInputFormatIndexer.cpp:70-95	indexRawBuffer -> kernel
+SIMDCSV-in	M	nes-input-formatters/src/SIMDCSVInputFormatIndexer.cpp:97-119	validateAndFormat + registrars + operator<<
+SIMDCSV-in	K	nes-input-formatters/private/SIMDCSVKernel.hpp:15-84	SIMD kernel decl
+SIMDCSV-in	K	nes-input-formatters/src/SIMDCSVKernel.cpp:15-237	SIMD kernel (SSE2/AVX2/NEON dispatch)
+SIMDCSV-in	K	nes-input-formatters/private/SIMDCSVScan.hpp:15-413	branchless band flatten + scan
+SeqCSV-in	B	nes-input-formatters/private/SequentialCSVInputFormatIndexer.hpp:15-64	ablation rung
+SeqCSV-in	B	nes-input-formatters/src/SequentialCSVInputFormatIndexer.cpp:15-82	ablation rung
+HL7-in	M	nes-plugins/InputFormatters/HL7InputFormatter/HL7InputFormatIndexer.hpp:15-37	includes
+HL7-in	M	nes-plugins/InputFormatters/HL7InputFormatter/HL7InputFormatIndexer.hpp:65-118	config params
+HL7-in	M	nes-plugins/InputFormatters/HL7InputFormatter/HL7InputFormatIndexer.hpp:119-214	HL7MetaData
+HL7-in	M	nes-plugins/InputFormatters/HL7InputFormatter/HL7InputFormatIndexer.hpp:216-235	indexer class decl
+HL7-in	M	nes-plugins/InputFormatters/HL7InputFormatter/HL7InputFormatIndexer.cpp:15-77	indexRawBuffer + validate + registrars
+HL7-in	M	nes-plugins/InputFormatters/HL7InputFormatter/CMakeLists.txt:13-15	CMake glue
+HL7-in	K	nes-plugins/InputFormatters/HL7InputFormatter/Hl7Scan.hpp:15-26	kernel includes
+HL7-in	K	nes-plugins/InputFormatters/HL7InputFormatter/Hl7Scan.hpp:47-108	scalar structural walk
+HL7-in	O	nes-plugins/InputFormatters/HL7InputFormatter/Hl7Scan.hpp:110-313	SIMD band flatten + arity pair check
+HL7-in	O	nes-plugins/InputFormatters/HL7InputFormatter/Hl7SimdKernel.hpp:15-65	SIMD kernel decl
+HL7-in	O	nes-plugins/InputFormatters/HL7InputFormatter/Hl7SimdKernel.cpp:15-234	SIMD kernel
+HL7-in	O	nes-plugins/InputFormatters/HL7InputFormatter/Hl7FieldIndex.hpp:15-185	custom single-band FIF
+HL7-in	O	nes-plugins/InputFormatters/HL7InputFormatter/SIMDHL7InputFormatIndexer.hpp:15-62	SIMD indexer class decl
+HL7-in	O	nes-plugins/InputFormatters/HL7InputFormatter/SIMDHL7InputFormatIndexer.cpp:15-172	SIMD indexer + registrars
+HL7-in	O	nes-plugins/InputFormatters/HL7InputFormatter/CMakeLists.txt:16-17	CMake glue SIMD
+HL7-in	B	nes-plugins/InputFormatters/HL7InputFormatter/SequentialHL7InputFormatIndexer.hpp:15-63	ablation rung
+HL7-in	B	nes-plugins/InputFormatters/HL7InputFormatter/SequentialHL7InputFormatIndexer.cpp:15-61	ablation rung
+HL7-in	B	nes-plugins/InputFormatters/HL7InputFormatter/CMakeLists.txt:18-21	CMake glue ablation rung
+SchemaJSON-in	M	nes-plugins/InputFormatters/SchemaJSONInputFormatter/SchemaJSONInputFormatIndexer.hpp:15-36	includes
+SchemaJSON-in	M	nes-plugins/InputFormatters/SchemaJSONInputFormatter/SchemaJSONInputFormatIndexer.hpp:37-67	config params
+SchemaJSON-in	M	nes-plugins/InputFormatters/SchemaJSONInputFormatter/SchemaJSONInputFormatIndexer.hpp:68-123	SchemaJSONMetaData
+SchemaJSON-in	M	nes-plugins/InputFormatters/SchemaJSONInputFormatter/SchemaJSONInputFormatIndexer.hpp:124-145	indexer class decl + kernel fwd decl
+SchemaJSON-in	M	nes-plugins/InputFormatters/SchemaJSONInputFormatter/SchemaJSONInputFormatIndexer.cpp:15-90	indexRawBuffer + validate + registrars
+SchemaJSON-in	K	nes-plugins/InputFormatters/SchemaJSONInputFormatter/SchemaJSONStage1.cpp:15-139	simdjson stage-1 strided gather
+SchemaJSON-in	O	nes-plugins/InputFormatters/SchemaJSONInputFormatter/SchemaJSONFieldIndex.hpp:15-214	custom single-band FIF
+SchemaJSON-in	M	nes-plugins/InputFormatters/SchemaJSONInputFormatter/CMakeLists.txt:13-16	CMake glue
+SchemaJSON-in	B	nes-plugins/InputFormatters/SchemaJSONInputFormatter/SequentialSchemaJSONInputFormatIndexer.hpp:15-63	ablation rung
+SchemaJSON-in	B	nes-plugins/InputFormatters/SchemaJSONInputFormatter/SequentialSchemaJSONInputFormatIndexer.cpp:15-54	ablation rung
+SchemaJSON-in	B	nes-plugins/InputFormatters/SchemaJSONInputFormatter/CMakeLists.txt:17-23	CMake glue ablation rung
+SIMDJSON-in	M	nes-plugins/InputFormatters/JSONInputFormatter/SIMDJSONInputFormatIndexer.hpp:15-52	indexer class decl
+SIMDJSON-in	M	nes-plugins/InputFormatters/JSONInputFormatter/SIMDJSONInputFormatIndexer.cpp:15-80	indexRawBuffer + validate + registrars
+SIMDJSON-in	K	nes-plugins/InputFormatters/JSONInputFormatter/SIMDJSONFIF.hpp:15-450	config+metadata+on-demand FIF
+SIMDJSON-in	K	nes-plugins/InputFormatters/JSONInputFormatter/SIMDJSONFIF.cpp:15-213	on-demand value extraction
+SIMDJSON-in	M	nes-plugins/InputFormatters/JSONInputFormatter/CMakeLists.txt:13-17	CMake glue
+SIMDJSON-in	B	nes-plugins/InputFormatters/JSONInputFormatter/SequentialSIMDJSONInputFormatIndexer.hpp:15-49	ablation rung
+SIMDJSON-in	B	nes-plugins/InputFormatters/JSONInputFormatter/SequentialSIMDJSONInputFormatIndexer.cpp:15-72	ablation rung
+SIMDJSON-in	B	nes-plugins/InputFormatters/JSONInputFormatter/CMakeLists.txt:18-25	CMake glue ablation rung
+Native-in	M	nes-plugins/InputFormatters/NativeInputFormatter/NativeInputFormatIndexer.hpp:15-39	includes
+Native-in	M	nes-plugins/InputFormatters/NativeInputFormatter/NativeInputFormatIndexer.hpp:40-66	config params
+Native-in	M	nes-plugins/InputFormatters/NativeInputFormatter/NativeInputFormatIndexer.hpp:67-152	NativeMetaData
+Native-in	M	nes-plugins/InputFormatters/NativeInputFormatter/NativeInputFormatIndexer.hpp:153-172	indexer class decl
+Native-in	K	nes-plugins/InputFormatters/NativeInputFormatter/NativeInputFormatIndexer.cpp:15-83	fixed-stride record walk
+Native-in	M	nes-plugins/InputFormatters/NativeInputFormatter/NativeInputFormatIndexer.cpp:85-107	validate + registrars + operator<<
+Native-in	K	nes-plugins/InputFormatters/NativeInputFormatter/NativeFIF.hpp:15-99	packed-binary FIF
+Native-in	M	nes-plugins/InputFormatters/NativeInputFormatter/CMakeLists.txt:13-16	CMake glue
+CSV-out	M	nes-output-formatters/private/CSVOutputFormatter.hpp:15-62	includes + class decl (mandatory part)
+CSV-out	O	nes-output-formatters/private/CSVOutputFormatter.hpp:63-72	supportsRunCoalescing + tryWriteCoalescedRun decl
+CSV-out	M	nes-output-formatters/private/CSVOutputFormatter.hpp:73-115	members + config params + FMT_OSTREAM
+CSV-out	M	nes-output-formatters/src/CSVOutputFormatter.cpp:15-56	includes
+CSV-out	K	nes-output-formatters/src/CSVOutputFormatter.cpp:57-274	varsized/quote writers + writeValue dispatch
+CSV-out	M	nes-output-formatters/src/CSVOutputFormatter.cpp:276-283	ctor
+CSV-out	M	nes-output-formatters/src/CSVOutputFormatter.cpp:285-358	writeFormattedValue
+CSV-out	O	nes-output-formatters/src/CSVOutputFormatter.cpp:360-447	tryWriteCoalescedRun fast path
+CSV-out	M	nes-output-formatters/src/CSVOutputFormatter.cpp:449-474	operator<< + validate + registrars
+JSON-out	M	nes-plugins/OutputFormatters/JSONOutputFormatter/JSONOutputFormatter.hpp:15-54	includes + class decl (mandatory part)
+JSON-out	O	nes-plugins/OutputFormatters/JSONOutputFormatter/JSONOutputFormatter.hpp:55-66	tryWriteRecordAllPassthrough decl
+JSON-out	M	nes-plugins/OutputFormatters/JSONOutputFormatter/JSONOutputFormatter.hpp:67-88	members + config params + FMT_OSTREAM
+JSON-out	M	nes-plugins/OutputFormatters/JSONOutputFormatter/JSONOutputFormatter.cpp:15-54	includes
+JSON-out	K	nes-plugins/OutputFormatters/JSONOutputFormatter/JSONOutputFormatter.cpp:55-418	JSON escape + string/char writers
+JSON-out	O	nes-plugins/OutputFormatters/JSONOutputFormatter/JSONOutputFormatter.cpp:419-532	unchecked copies + width tables + bounded stores
+JSON-out	K	nes-plugins/OutputFormatters/JSONOutputFormatter/JSONOutputFormatter.cpp:533-738	writeValue dispatch
+JSON-out	M	nes-plugins/OutputFormatters/JSONOutputFormatter/JSONOutputFormatter.cpp:739-748	ctor
+JSON-out	M	nes-plugins/OutputFormatters/JSONOutputFormatter/JSONOutputFormatter.cpp:750-803	writeFormattedValue
+JSON-out	O	nes-plugins/OutputFormatters/JSONOutputFormatter/JSONOutputFormatter.cpp:805-932	tryWriteRecordAllPassthrough whole-record fast path
+JSON-out	M	nes-plugins/OutputFormatters/JSONOutputFormatter/JSONOutputFormatter.cpp:933-953	validate + operator<< + registrars
+JSON-out	M	nes-plugins/OutputFormatters/JSONOutputFormatter/CMakeLists.txt:13-25	CMake glue
+JSON-out	O	nes-plugins/OutputFormatters/JSONOutputFormatter/CMakeLists.txt:26-34	nautilus_inline registration
+HL7-out	M	nes-plugins/OutputFormatters/HL7OutputFormatter/HL7OutputFormatter.hpp:15-35	includes
+HL7-out	M	nes-plugins/OutputFormatters/HL7OutputFormatter/HL7OutputFormatter.hpp:54-87	class decl
+HL7-out	M	nes-plugins/OutputFormatters/HL7OutputFormatter/HL7OutputFormatter.hpp:89-143	config params + FMT_OSTREAM
+HL7-out	M	nes-plugins/OutputFormatters/HL7OutputFormatter/HL7OutputFormatter.cpp:15-46	includes
+HL7-out	K	nes-plugins/OutputFormatters/HL7OutputFormatter/HL7OutputFormatter.cpp:49-141	writeRawBytes + writeValue dispatch
+HL7-out	M	nes-plugins/OutputFormatters/HL7OutputFormatter/HL7OutputFormatter.cpp:143-163	ctor (precomputed constant glue)
+HL7-out	M	nes-plugins/OutputFormatters/HL7OutputFormatter/HL7OutputFormatter.cpp:165-200	writeFormattedValue
+HL7-out	M	nes-plugins/OutputFormatters/HL7OutputFormatter/HL7OutputFormatter.cpp:202-233	validate + operator<< + registrars
+HL7-out	M	nes-plugins/OutputFormatters/HL7OutputFormatter/CMakeLists.txt:13-25	CMake glue
+HL7-out	O	nes-plugins/OutputFormatters/HL7OutputFormatter/CMakeLists.txt:26-31	nautilus_inline registration

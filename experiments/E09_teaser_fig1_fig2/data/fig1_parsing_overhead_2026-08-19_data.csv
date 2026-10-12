@@ -1,0 +1,6 @@
+query,deserialize_pct,process_pct,serialize_pct,throughput_mrows_s
+q0 SELECT *,26.9,1.0,72.1,2.3
+q1 currency conv.,25.8,1.0,73.2,1.8
+q10 datetime fmt,23.0,4.6,72.4,1.7
+q2 filter (0.8% sel.),97.0,1.5,1.5,6.6
+YSB windowed count,93.2,6.8,0.0,2.0

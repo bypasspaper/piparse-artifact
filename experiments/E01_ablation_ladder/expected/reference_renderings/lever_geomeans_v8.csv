@@ -1,0 +1,12 @@
+lever,from,to,geomean,min,max,min_query,max_query,reference
+r1->r2,r1,r2,1.083,1.047,1.113,q0,q2og,1.08
+r2->r3_eager_all,r2,r3_eager_all,1.887,1.577,2.142,q1,qroute,1.88
+r3_eager_all->r3_lazy_nopass,r3_eager_all,r3_lazy_nopass,1.495,1.114,2.627,q22,q2mod,1.5
+r3_lazy_nopass->r3,r3_lazy_nopass,r3,1.263,0.990,1.851,qex,qproject,1.26
+r3->r4,r3,r4,1.120,0.997,1.899,qproject,qex,1.12
+r4->r5,r4,r5,1.185,1.015,1.549,q1,q0,1.18
+r5->r6,r5,r6,1.251,0.997,1.814,q2og,q22,1.25
+r6->r6b,r6,r6b,1.082,0.996,1.934,q0,q2og,1.08
+r6b->r7,r6b,r7,9.733,6.143,16.886,q0,q14,9.73
+r2->r3 (old compile bar),r2,r3,3.564,,,,,3.56
+r1->r7 (cumulative),r1,r7,67.518,,,,,68

@@ -1,0 +1,113 @@
+# SPDX-License-Identifier: Apache-2.0
+experiment:
+  name: pi_naive_stateful_w3
+  description: >
+    W3 RETAKE (staged 2026-10-03 real time; Pi clock ~6 d behind). Identical to pi_naive_stateful except
+    number_of_worker_threads 1 -> 3 = the optimized/native/Flink/Spark arms' budget on this box. The W1 run gave
+    the naive arm ONE worker while every other arm had three; in sequential mode the source thread parses inline
+    but the JSONUncompiled stringstream OUTPUT stage + sink run on the worker pool, so W1 capped serialisation at
+    one core even for a single stream (the W3 scaling ladder's N=1 point == this tier's q0: 71.7 -> 180.1 MB/s).
+    io1 is inert on the blocking path and kept so the worker block matches pi_stateless_tier. Same binary
+    (2026-08-23, commit 8217cce465) as the W1 tier -> directly comparable; W1 rows stay under the old names.
+    PI NAIVE ARM - STATEFUL TIER. Companion to pi_naive_stateless; together they give the Pi the
+    NES-Naive arm for all 13 PAPER_WORKLOAD Set B queries, which the original campaign
+    (pi_stateless_tier / pi_stateful_tier) did not record.
+    NAIVE STACK (verbatim from the CORRECTED reference arm, experiments/naive_corrected_stateful.yaml):
+    single worker thread, BlockingFile source, SequentialUncompiledOldCSV input formatter in
+    sequential threading mode, JSONUncompiled output formatter, EMPTY input_parser and
+    output_parser maps, plus the GENUINE original (de)serializers via NES_INPUT_CODEC=original
+    and NES_OUTPUT_CODEC=original.
+    NOTE ON THE EMPTY PARSER MAP AND cm_q2: pi_stateful_tier requires TracedBOOL because
+    cluster_monitoring has a BOOLEAN column and DefaultBOOL SIGABRTs release workers. That
+    constraint does NOT carry over here: the empty map is correct for the naive arm because
+    SequentialUncompiledOldCSV + NES_INPUT_CODEC=original bypasses the pluggable parser set
+    entirely, so no BOOL parser is selected at all. This is the same configuration the reference
+    box's corrected naive arm used for cm_q2. It is still smoke-tested per query before the
+    timing run rather than assumed.
+    generator.repeat = 1 ALWAYS - replaying a file into event-time windows corrupts the NES heap.
+    PI DEVIATIONS - three, the first two inherited verbatim from pi_stateful_tier:
+      1. ysb_1k_varsized runs at data_size large, NOT the frozen xlarge. xlarge needs
+         ysb1k_varsized_ext4_15G.csv (14.85 GB) which is not on this box and could not be
+         page-cache resident in 16 GB anyway. large (3.7 GB, 20M rows) fits cache and has a
+         recorded validation entry (68000 / 278998939) that xlarge lacks.
+      2. q8_join keeps the frozen buffer-COUNT-bound stateful pool (4 KiB x 2,000,000 = 8 GB);
+         window state is consumed by buffer COUNT, not bytes.
+      3. The x axis is worker threads = 1, not 23 - not a real deviation, since the reference
+         naive arm also forces 1 via its series override (23 was only the axis label), and
+         completion_timeout_s is raised 900 -> 3600 because the naive arm is far slower.
+    PRE-FLIGHT: person_840MB.csv and auction_707MB.csv must be LF, not CRLF - the CRLF symlinks
+    return after any build-dir regeneration and auction's trailing CR on its last column
+    (category INT32) makes strict parsing throw. Verify with
+    scripts/check_lf_datasets.sh <build>/nes-systests/testdata before running.
+  primary_metric: throughput_mbps
+  higher_is_better: true
+  repetitions: 10
+  aggregation: median
+
+defaults:
+  system: nebulastream
+  branch: benchmark-piparse-lazyparse-fast-csv
+  mode: worker-cli
+  build: native
+  data_size: large
+  topology: single-node
+  warm_read: true
+  completion_timeout_s: 3600
+  worker:
+    query_engine:
+      number_of_worker_threads: 3
+      number_of_io_threads: 1
+      invoke_mode_configuration: fnattr
+      pin_threads: false
+      ccx_aware_task_queues: false
+      admission_queue_size: 1024
+    default_query_execution:
+      operator_buffer_size: 131072
+      execution_mode: COMPILER
+    number_of_buffers_in_global_buffer_manager: 16384
+    dump_compilation_result: NONE
+  query_config:
+    source_type: BlockingFile
+    sink_type: Monitoring
+    input_formatter: { type: SequentialUncompiledOldCSV, threading_mode: sequential }
+    input_parser: {}
+    output_formatter: { type: JSONUncompiled }
+    output_parser: {}
+  generator:
+    repeat: 1
+  worker_env:
+    NES_MMAP_POPULATE: "1"
+    NES_INPUT_CODEC: original
+    NES_OUTPUT_CODEC: original
+
+_w_x: &w_x
+  label: "worker threads"
+  parameter: worker.query_engine.number_of_worker_threads
+  values: [3]
+
+_y: &mbps_y { metric: throughput_mbps, label: "Throughput (MB/s, csv input bytes)" }
+
+_stateful_pool: &stateful_pool
+  worker.default_query_execution.operator_buffer_size: 4096
+  worker.number_of_buffers_in_global_buffer_manager: 2000000
+
+variants:
+  - name: ysb_1k_varsized
+    description: "YSB varsized 1k, tumble 30s count per campaign (input-bound pole)"
+    query: yahoo/ysb_1k_varsized
+    axes: { x: *w_x }
+    y: *mbps_y
+    visualization: { type: bar_chart }
+  - name: q8_join
+    description: "Nexmark Q8: person JOIN auction, tumble 10s (state-dominated pole)"
+    query: nexmark/q8_join
+    overrides: *stateful_pool
+    axes: { x: *w_x }
+    y: *mbps_y
+    visualization: { type: bar_chart }
+  - name: cm_q2
+    description: "ClusterMonitoring Q2: sliding 60s/1s SUM(cpu) by jobId, eventType=3 (middle)"
+    query: cluster_monitoring/q2_original
+    axes: { x: *w_x }
+    y: *mbps_y
+    visualization: { type: bar_chart }

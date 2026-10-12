@@ -1,0 +1,4 @@
+x,query,naive_med,naive_lo,naive_hi,simd_med,simd_lo,simd_hi,csvnat_med,csvnat_lo,csvnat_hi,native_med,native_lo,native_hi,flink_med,flink_lo,flink_hi,spark_med,spark_lo,spark_hi,simd_over_naive,simd_over_flink,simd_over_spark,simd_over_native,csvnat_over_native
+1,ysb_1k_varsized,2.386,0.174,0.129,273.865,11.788,5.851,276.942,4.064,5.138,284.996,6.381,9.923,1.467,0.057,0.102,1.058,0.015,0.094,114.8,186.7,258.9,0.96,0.97
+2,q8_join,3.990,0.152,0.527,3.319,0.030,0.759,3.320,0.045,0.141,3.183,0.162,0.044,2.032,0.075,0.175,0.835,0.034,0.035,0.8,1.6,4.0,1.04,1.04
+3,cm_q2,2.236,0.055,0.046,8.835,0.164,0.289,8.888,0.109,0.914,9.237,0.161,0.211,0.903,0.015,0.010,0.556,0.021,0.004,4.0,9.8,15.9,0.96,0.96

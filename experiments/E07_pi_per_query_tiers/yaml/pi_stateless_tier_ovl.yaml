@@ -1,0 +1,169 @@
+# SPDX-License-Identifier: Apache-2.0
+experiment:
+  name: pi_stateless_tier_ovl
+  description: >
+    OVERLOAD RETAKE (staged 2026-10-05 real; Pi clock ~6 d behind). Identical to pi_stateless_tier except a 2-entry
+    series: ctrl (verbatim, lazy overloads OFF = the engine default the tier silently ran with) vs ovl (pbench
+    overload: true -> INPUT_FORMATTER.LAZY_INT/UINT/FLOAT_OVERLOADS). Audit 2026-10-05: NO per-query tier or ladder
+    on either box ever set the knob; the Sept Fig1/Fig2 teasers did -> Fig1 Q2 (overload ON) vs the per-query
+    table (OFF) were inconsistent. Expected to move: q2_og (5x INT32 ==); minor: q_ex (INT32 == on survivors),
+    cm_q2 (INT16 == 3). VARSIZED equality is always overloaded (q_route/ysb unaffected); q14/q2_mod cannot be.
+    Same-session ctrl makes the A/B binary-drift-proof. overload sits in a series override on purpose (the
+    stale validation rule on this checkout rejects it in defaults).
+    PI PROBE B - the FROZEN PAPER_WORKLOAD Set B STATELESS TIER (10 queries on bid_strings:
+    q0, q_project, q_route, q1, q2-og, q2-mod, q10, q14, q22, Q_ex) on a 4-core Raspberry
+    Pi 5, csv -> json, NES only. This is the same query set and the same NES stack as
+    nes_vs_flink_vs_spark_stateless; the Flink and Spark arms are ABSENT because neither is
+    installed on this box (no JVM, no pyspark/pyflink) - do not read this as a head-to-head.
+    STACK (frozen, verbatim): MmapFile zero-copy single reader + NES_MMAP_POPULATE=1 (whole
+    mapping prefaulted in open(), outside the timed window), warm_read page cache, SIMDCSV
+    in with the fast parser set -> JSON output formatter + ZMIJ float codec into Monitoring,
+    fnattr invoke mode, 128 KiB operator buffers, COMPILER, 16384-buffer global pool,
+    pin_threads/ccx_aware_task_queues OFF (a Pi has no CCX).
+    PI DEVIATION - exactly ONE knob differs from the reference config:
+      number_of_worker_threads 23 -> 3 (+ io1). The frozen W23+io1 = the reference box's 24
+         physical cores; this box has 4, so W3+io1 = 4 is the same topology. W3 is also the
+         MEASURED optimum (pi_stateless_wsweep, 2026-08-20): q0 peaks at W3 and loses 4.4%
+         at W4 (non-overlapping rep ranges), q_project is statistically tied W3 vs W4. So the
+         "leave one core for the source/io thread" rule holds on ARM as well - the analogue
+         and the measurement agree, which is why W3 is used rather than asserted.
+      NOTE what is NOT deviated: generator.repeat stays at the frozen 8. Measured first -
+         this box runs 1.2-5.1 GB/s out of page cache, so a single 3.6 GB pass is a 0.7-3.0 s
+         window, too short to trust; 8 passes give 6-24 s windows. Worker count is therefore
+         the ONLY knob that differs from the reference config.
+    READING THE NUMBERS: the input is page-cache resident (3.6 GB of 16 GB), so this measures
+    the parse+serialize stack, NOT the PCIe Gen3 x1 NVMe (~900 MB/s, which would otherwise
+    clip everything). Absolute magnitudes do not transfer from the 64 GB / 6.9 GB/s reference
+    box; the PER-QUERY SHAPE (which of the 10 shapes are parse-bound vs output-bound) is what
+    transfers and is the point of this probe.
+    REP HISTORY: this experiment was first run at 3 reps; this configuration adds 7 more so the
+    NES arm is POOLED to n=10, matching the Flink and Spark arms (which ran 10 reps). Both
+    run_groups live in the raw runs table. IMPORTANT: pbench aggregated view is scoped to the
+    LATEST run_group only, so it will show n=7, not the pooled n=10 - compute medians from the
+    runs table directly. Build, commit, config and CPU governor (performance) are identical
+    across both run_groups; the 3-rep and 7-rep medians were compared for drift before pooling.
+  primary_metric: throughput_mbps
+  higher_is_better: true
+  repetitions: 7
+  aggregation: median
+
+defaults:
+  system: nebulastream
+  branch: benchmark-piparse-lazyparse-fast-csv
+  mode: worker-cli
+  build: native
+  data_size: csv
+  topology: single-node
+  warm_read: true
+  completion_timeout_s: 900
+  worker:
+    query_engine:
+      number_of_worker_threads: 3
+      number_of_io_threads: 1
+      invoke_mode_configuration: fnattr
+      pin_threads: false
+      ccx_aware_task_queues: false
+      admission_queue_size: 1024
+    default_query_execution:
+      operator_buffer_size: 131072
+      execution_mode: COMPILER
+    number_of_buffers_in_global_buffer_manager: 16384
+    dump_compilation_result: NONE
+  query_config:
+    source_type: MmapFile
+    sink_type: Monitoring
+    input_formatter: { type: SIMDCSV, allow_commas_in_strings: false }
+    input_parser:
+      uint64: TracedUINT64
+      int64: TracedINT64
+      int32: FastINT32
+      int16: TracedINT16
+      uint32: TracedUINT32
+      uint16: TracedUINT16
+      f64: EiselFloatF64
+      f32: EiselFloatF32
+      bool: TracedBOOL
+    output_formatter: { type: JSON }
+    output_parser: { f64: ZMIJF64, f32: ZMIJF32 }
+  generator:
+    repeat: 8
+  worker_env:
+    NES_MMAP_POPULATE: "1"
+
+_w_x: &w_x
+  label: "worker threads"
+  parameter: worker.query_engine.number_of_worker_threads
+  values: [3]
+
+_y: &mbps_y { metric: throughput_mbps, label: "Throughput (MB/s, csv input bytes)" }
+
+_ovl_s: &ovl_s
+  label: "lazy overloads"
+  explicit:
+    - name: ctrl
+      baseline: true
+      overrides: {}
+    - name: ovl
+      overrides: { overload: true }
+
+variants:
+  - name: q0
+    description: "q0: SELECT * FROM bid - full-stream forwarding / output serialization"
+    query: nexmark/matrix/bidstr_q0
+    axes: { x: *w_x, series: *ovl_s }
+    y: *mbps_y
+    visualization: { type: bar_chart }
+  - name: q_project
+    description: "q_project: SELECT price FROM bid - k=1 projection"
+    query: nexmark/matrix/bidstr_qproject
+    axes: { x: *w_x, series: *ovl_s }
+    y: *mbps_y
+    visualization: { type: bar_chart }
+  - name: q_route
+    description: "q_route: SELECT * WHERE channel = 'google' - filter -> full-record output"
+    query: nexmark/matrix/bidstr_qroute
+    axes: { x: *w_x, series: *ovl_s }
+    y: *mbps_y
+    visualization: { type: bar_chart }
+  - name: q1
+    description: "q1: price * 908/1000 currency conversion (compute + codec)"
+    query: nexmark/matrix/bidstr_q1
+    axes: { x: *w_x, series: *ovl_s }
+    y: *mbps_y
+    visualization: { type: bar_chart }
+  - name: q2_og
+    description: "q2-og: 5-way OR point selection (repeated-parse/GVN territory)"
+    query: nexmark/matrix/bidstr_q2og
+    axes: { x: *w_x, series: *ovl_s }
+    y: *mbps_y
+    visualization: { type: bar_chart }
+  - name: q2_mod
+    description: "q2-mod: auctionId % 123 = 0 filter (~0.82% survivors)"
+    query: nexmark/matrix/bidstr_q2mod
+    axes: { x: *w_x, series: *ovl_s }
+    y: *mbps_y
+    visualization: { type: bar_chart }
+  - name: q10
+    description: "q10: ms-epoch -> ISO-8601 datetime export (UTC)"
+    query: nexmark/matrix/bidstr_q10
+    axes: { x: *w_x, series: *ovl_s }
+    y: *mbps_y
+    visualization: { type: bar_chart }
+  - name: q14
+    description: "q14: computed-float range filter"
+    query: nexmark/matrix/bidstr_q14
+    axes: { x: *w_x, series: *ovl_s }
+    y: *mbps_y
+    visualization: { type: bar_chart }
+  - name: q22
+    description: "q22: unconditional CONCAT alert (string-output regime)"
+    query: nexmark/matrix/bidstr_q22
+    axes: { x: *w_x, series: *ovl_s }
+    y: *mbps_y
+    visualization: { type: bar_chart }
+  - name: q_ex
+    description: "Q_ex: HOSP working example (mixed-predicate filter -> nested CONCAT, ~220 rows)"
+    query: nexmark/matrix/bidstr_qex
+    axes: { x: *w_x, series: *ovl_s }
+    y: *mbps_y
+    visualization: { type: bar_chart }

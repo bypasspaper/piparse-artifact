@@ -1,0 +1,25 @@
+nes-build: mode=host  build=/home/user/work/nebulastream-public/cmake-build-release
+formatter-scaling: file=bigstr_id_80k_500m.csv rawBuf=4KiB buffers=128018 bytes=500.1MiB reps=15
+drain mode: leannoemit | project: (none, parse all cols) | fnattr: off | uint64 parser: DefaultUINT64 | allow_commas: default(true)
+
+=== sequence_shredder_mode = LOCK_FREE (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        1 |  3.013 |   1.00x | min..max  2.949.. 3.094 (spread    5%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+        2 |  2.977 |   0.99x | min..max  2.926.. 3.098 (spread    6%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+        4 |  4.338 |   1.44x | min..max  4.207.. 4.415 (spread    5%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+        8 |  7.183 |   2.38x | min..max  6.454.. 7.784 (spread   19%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       12 |  8.891 |   2.95x | min..max  6.838.. 9.682 (spread   32%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       16 |  9.738 |   3.23x | min..max  6.006..10.306 (spread   44%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       20 | 10.592 |   3.52x | min..max  5.885..11.920 (spread   57%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       24 | 10.810 |   3.59x | min..max  6.535..11.108 (spread   42%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+
+=== sequence_shredder_mode = LOCKING (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        1 |  3.147 |   1.00x | min..max  3.027.. 3.161 (spread    4%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+        2 |  2.282 |   0.73x | min..max  2.205.. 2.415 (spread    9%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+        4 |  2.516 |   0.80x | min..max  2.355.. 2.619 (spread   10%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+        8 |  3.263 |   1.04x | min..max  3.091.. 3.372 (spread    9%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       12 |  3.937 |   1.25x | min..max  0.629.. 5.874 (spread  133%, n=15) | repeats/pass=   134229 (104.9% of buffers)
+       16 |  4.104 |   1.30x | min..max  0.275.. 4.319 (spread   99%, n=15) | repeats/pass=   369376 (288.5% of buffers)
+       20 |  4.019 |   1.28x | min..max  1.355.. 4.276 (spread   73%, n=15) | repeats/pass=    64595 ( 50.5% of buffers)
+       24 |  3.964 |   1.26x | min..max  3.709.. 4.065 (spread    9%, n=15) | repeats/pass=        0 (  0.0% of buffers)

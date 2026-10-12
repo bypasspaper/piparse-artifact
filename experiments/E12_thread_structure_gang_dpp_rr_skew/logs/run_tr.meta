@@ -1,0 +1,26 @@
+sweep(tr) started 2026-09-09T19:46:27+02:00 streams=1,2,4,8,16,32,64,128,256,512 reps=3 window=5
+sweep(tr) finished 2026-09-09T20:07:48+02:00
+sweep(tr/W24) started 2026-09-09T20:38:27+02:00 streams=1,2,4,8,16,32,64,128,256,512 reps=3 window=5 W=24 arms=dpp 1|chunker 4
+sweep(tr) finished 2026-09-09T20:48:52+02:00
+sweep(tr/W24idx) started 2026-09-10T11:40:04+02:00 streams=1,2,4,8,16,32,64,128,256,512 reps=3 window=5 W=24 arms=chunker 4
+sweep(tr) finished 2026-09-10T11:45:03+02:00
+sweep(tr/scan) started 2026-09-10T12:53:35+02:00 streams=1,2,4,8,16,32,64,128,256,512 reps=3 window=5 W=24 D=1 arms=chunker 4
+sweep(tr) finished 2026-09-10T12:58:34+02:00
+sweep(tr) finished 2026-09-10T13:17:17+02:00
+sweep(tr/fix) started 2026-09-10T13:29:23+02:00 streams=1,2,4,8,16,32,64,128,256,512 reps=3 window=5 W=24 D=64 arms=chunker 4
+sweep(tr) finished 2026-09-10T13:34:29+02:00
+sweep(tr) started 2026-09-10T16:08:58+02:00 streams=1,2,4,8,16,32,64,128,256,512 reps=3 window=5 W=24 D=64 cap=1000 arms=dpp 1|gprivate 1|gprivate 4|chunker 4
+sweep(tr) finished 2026-09-10T16:30:08+02:00
+sweep(tr) started 2026-09-10T16:34:47+02:00 streams=1,2,4,8,16,32,64,128,256,512 reps=3 window=5 W=24 D=64 cap=1000 arms=dpp 1|gprivate 1|gprivate 4|chunker 4
+sweep(tr) finished 2026-09-10T16:56:43+02:00
+sweep(tr/ws) started 2026-09-10T18:35:17+02:00 streams=1,2,4,8,16,32,64,128,256,512 reps=3 window=5 W=24 D=64 cap=1000 arms=dpp 1|gprivate 1|gprivate 4|chunker 4
+sweep(tr) finished 2026-09-10T18:58:24+02:00
+sweep(tr/ws) started 2026-09-10T18:58:24+02:00 streams=1,2,4,8,16,32,64,128,256,512 reps=3 window=5 W=24 D=64 cap=1000 arms=chunker 4
+sweep(tr) finished 2026-09-10T19:03:49+02:00
+sweep(tr/ws_rr) started 2026-09-23T09:26:13+02:00 streams=1,2,4,8,16,32,64,128,256,512 reps=3 window=5 W=24 D=64 cap=1000 heavy=off burst=off arms=rr 1
+sweep(tr) finished 2026-09-23T09:31:54+02:00
+sweep(tr/ws_heavy) started 2026-09-23T09:31:54+02:00 streams=1,2,4,8,16,32,64,128,256,512 reps=3 window=5 W=24 D=64 cap=1000 heavy=0.1,4 burst=off arms=dpp 1|gprivate 1|gprivate 4|chunker 4|rr 1
+sweep(tr) finished 2026-09-23T10:00:41+02:00
+sweep(tr/ws_burst) started 2026-09-23T10:00:41+02:00 streams=1,2,4,8,16,32,64,128,256,512 reps=3 window=5 W=24 D=64 cap=1000 heavy=off burst=20,20 arms=dpp 1|gprivate 1|gprivate 4|chunker 4|rr 1
+sweep(tr/ws_burst) started 2026-09-23T10:41:33+02:00 streams=1,2,4,8,16,32,64,128,256,512 reps=3 window=5 W=24 D=64 cap=1000 heavy=off burst=20,20 arms=dpp 1|gprivate 1|gprivate 4|chunker 4|rr 1
+sweep(tr) finished 2026-09-23T11:10:21+02:00

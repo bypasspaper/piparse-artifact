@@ -1,0 +1,21 @@
+     23 raw    20 code   nes-plugins/InputFormatters/HL7InputFormatter/HL7InputFormatIndexer.hpp:15-37
+     54 raw    38 code   nes-plugins/InputFormatters/HL7InputFormatter/HL7InputFormatIndexer.hpp:65-118
+     96 raw    76 code   nes-plugins/InputFormatters/HL7InputFormatter/HL7InputFormatIndexer.hpp:119-214
+     20 raw    15 code   nes-plugins/InputFormatters/HL7InputFormatter/HL7InputFormatIndexer.hpp:216-235
+     63 raw    52 code   nes-plugins/InputFormatters/HL7InputFormatter/HL7InputFormatIndexer.cpp:15-77
+      3 raw     3 code   nes-plugins/InputFormatters/HL7InputFormatter/CMakeLists.txt:13-15
+      1 raw     1 code   nes-plugins/CMakeLists.txt:25-25
+     12 raw     9 code   nes-plugins/InputFormatters/HL7InputFormatter/Hl7Scan.hpp:15-26
+     62 raw    50 code   nes-plugins/InputFormatters/HL7InputFormatter/Hl7Scan.hpp:47-108
+    334 raw   264 code   == min input = 334 raw / 264 code
+     21 raw    18 code   nes-plugins/OutputFormatters/HL7OutputFormatter/HL7OutputFormatter.hpp:15-35
+     34 raw    22 code   nes-plugins/OutputFormatters/HL7OutputFormatter/HL7OutputFormatter.hpp:54-87
+     55 raw    41 code   nes-plugins/OutputFormatters/HL7OutputFormatter/HL7OutputFormatter.hpp:89-143
+     32 raw    30 code   nes-plugins/OutputFormatters/HL7OutputFormatter/HL7OutputFormatter.cpp:15-46
+     93 raw    82 code   nes-plugins/OutputFormatters/HL7OutputFormatter/HL7OutputFormatter.cpp:49-141
+     21 raw    18 code   nes-plugins/OutputFormatters/HL7OutputFormatter/HL7OutputFormatter.cpp:143-163
+     36 raw    27 code   nes-plugins/OutputFormatters/HL7OutputFormatter/HL7OutputFormatter.cpp:165-200
+     32 raw    25 code   nes-plugins/OutputFormatters/HL7OutputFormatter/HL7OutputFormatter.cpp:202-233
+     13 raw    11 code   nes-plugins/OutputFormatters/HL7OutputFormatter/CMakeLists.txt:13-25
+      1 raw     1 code   nes-plugins/CMakeLists.txt:27-27
+    338 raw   275 code   == min output = 338 raw / 275 code

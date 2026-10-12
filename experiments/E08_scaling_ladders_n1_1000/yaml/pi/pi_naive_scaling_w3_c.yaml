@@ -1,0 +1,162 @@
+# SPDX-License-Identifier: Apache-2.0
+experiment:
+  name: pi_naive_scaling_w3_c
+  description: >
+    PART C of four: N=500 ALONE, n=1, ~2.7 h at ~185 MB/s. Split out from N=1000 deliberately: it is the last point before the one that killed blocking MmapFile on this box, so it is the natural place to READ THE SAMPLER (thread count, RSS, forward progress) and learn whether N=1000 will complete or stall. 21600 s is 2.2x the plateau prediction.
+
+    NES-NAIVE ON THE SCALING LADDER. The Pi campaign has NES(optimized), Flink and Spark on one
+    matched `num_queries` ladder, and a 4-arm per-query story, but NES-Naive has never been run
+    on the SCALING axis -- on EITHER box (the reference's nes_vs_flink_vs_spark_scaling.yaml has
+    only NebulaStream/Flink/Spark series). This is a NEW arm.
+
+    WHY IT IS WORTH ~19 h. NES(optimized) is FLAT at 1301-1315 MB/s from N=25 to N=1000 while
+    Flink DIES at N=1000 (TaskManager heartbeat timeout, num_slots=N) and Spark holds a bounded
+    132.6-140.7. The open question that curve cannot answer is ATTRIBUTION: is NES's flatness
+    the fast parse/serialize stack, or the async source with its FIXED io-thread budget? NES-Naive
+    changes exactly those two things at once and nothing else -- same engine, same workload, same
+    file, same ladder -- so where it tracks NES the credit is elsewhere, and where it departs the
+    credit is the parser+source. It also lands NES-Naive as a FOURTH ENGINE next to Flink and
+    Spark, which is how it is already used in nes_vs_flink_vs_spark_stateless_5arm.yaml.
+
+    NAIVE STACK -- verbatim from pi_naive_stateless AND the NES-Naive series in
+    nes_vs_flink_vs_spark_stateless_5arm.yaml, which agree exactly EXCEPT W (W3 here, see below): BlockingFile,
+    SequentialUncompiledOldCSV (sequential), JSONUncompiled, EMPTY input_parser and output_parser
+    maps (the pluggable fast parser set is bypassed entirely), genuine original (de)serializers
+    via NES_INPUT_CODEC=original (stod) + NES_OUTPUT_CODEC=original (stringstream),
+    generator.repeat 1. W3 RE-RUN (staged 2026-10-02 real time; the Pi clock runs ~6 d behind). The ORIGINAL ladder
+    (pi_naive_scaling_a-d, Aug 27-29) ran W1 on the argument below that W1 is the baseline's definition.
+    That argument was overtaken on 2026-09-01 on the reference box: the naive many-source arm
+    (nes_naive_native_scaling_step20.yaml) had to be given the SAME worker budget as the optimized
+    arm (W16 = SIMD's 16w) because threading_mode sequential only serialises per-source spanning-tuple
+    resolution and runs the formatter INLINE on the source thread (RunningSource.cpp, the Execute
+    handler: DefaultPEC with 1 thread on the source, formatted buffers then emitWork-ed to the admission
+    queue), so the JSONUncompiled stringstream OUTPUT stage + sink execute on the WORKER POOL -- W1
+    funnels every stream's serialisation (the dominant naive cost, ~3.5x the parse) through ONE core
+    while the optimized arm has three. This file is the Pi twin of that fix: W3 = the optimized arm's W3 (+io1, inert on the
+    blocking path, kept so the worker block is identical to pi_scaling_file_*). EVERYTHING ELSE IS
+    VERBATIM the W1 ladder. The W1 rows stay in the runs table as the single-worker reference;
+    dump.py needs a separate naive_scaling_w3.csv selection. Superseded argument, kept for the record:
+    "DO NOT "give naive the whole machine" by raising W to 3 to match the
+    optimized arm's W3+io1: W1 is part of the arm's DEFINITION everywhere else it is quoted, and
+    changing it here would make this curve incomparable with naive.csv and with the 5-arm figure.
+    The single worker thread is a PROPERTY OF THE BASELINE, not a handicap introduced here."
+
+    LADDER/WORKLOAD are the frozen scaling config, x-values IDENTICAL to
+    pi_scaling_file_{a,b,c} / pi_flink_scaling_{a,b,c} / pi_spark_mb_{a,b,c} so all four
+    curves overlay: the 10-query stateless PAPER_WORKLOAD as a heterogeneous query_mix in the
+    SAME ORDER, csv -> json, all N sources on the SAME warm bid_strings_3GB.csv, repeat 1.
+
+    MEASURED PROBE (pi_naive_scaling_probe, n=1, 2026-08-27) -- this ladder is sized from it:
+      N=1 71.9 | 2 105.9 | 4 131.0 | 8 183.8 | 16 185.6 MB/s.
+    HARNESS GATE PASSED: at N=1 the mix runs only query_mix[0]=q0, and 71.9 reproduces
+    pi_naive_stateless's independent q0 median of 71.10 to 1.1% (Flink's twin gate matched 2%,
+    Spark's 1.0%). That also re-proves the naive path on the CURRENT binary, rebuilt 2026-08-23
+    after the probe arm's original 2026-08-22 run.
+
+    PRE-REGISTERED EXPECTATIONS (written before launch; judge the run against these).
+      1. THE PLATEAU IS ~185 MB/s. The probe saturates by N=8 (183.8) and is flat to N=16
+         (185.6) = 2.58x the N=1 point. Expect N>=25 to hold ~180-190 with mix-composition
+         oscillation.
+      2. A SINGLE-WORKER SERIALISATION MODEL IS *REFUTED* BY N=8. Predicting
+         mbps(N) = N / sum(1/rate[i mod 10]) from pi_naive_stateless's per-query W1 rates
+         (q0 71.1, q_project 241.9, q_route 239.1, q1 114.5, q2og 239.5, q2mod 241.4, q10 101.5,
+         q14 239.1, q22 103.3, q_ex 241.5) fits N=1/2/4 to within 4% (71.1/109.9/128.5 vs
+         71.9/105.9/131.0) but UNDERSHOOTS N=8 by 23% (149.6 vs 183.8). So work is NOT all
+         funnelling through the one worker thread -- the N blocking source threads buy real
+         parallelism, to ~2.6 cores. Record this; do not re-derive it.
+      3. NES-NAIVE SHOULD BEAT BOTH JVM ENGINES. At ~185 it sits ABOVE Flink's ~145 plateau and
+         Spark's ~135, while being ~7x BELOW NES(optimized)'s ~1305. If that holds, the
+         decomposition is clean: NES-naive-vs-Flink is ~1.3x of engine, and the remaining ~7x is
+         the parse/serialize stack plus the async source.
+      4. THE HIGH-N POINTS ARE THE REAL EXPERIMENT, AND A COLLAPSE IS A RESULT, NOT A BUG.
+         BlockingFile allocates ONE OS THREAD PER SOURCE, so N=250/500/1000 mean 250/500/1000
+         source threads on 4 cores. Blocking MmapFile was measured on THIS BOX at N=1000 making
+         NO forward progress (1017 threads, 4 cores at 94%, 198 runnable, 0 of 1000 queries
+         reaching EoS in 46 min wall / 2h52m CPU). ablation_query_scaling_A.yaml already records
+         the standing rule for blocking rungs: "at num_queries 500/1000 they oversubscribe and
+         may collapse or stall (expected; the async rungs are the contrast). If a blocking cell
+         hangs, cap its num_queries; do not fix it." If NES-Naive degrades or dies where Flink
+         died, THAT IS THE ATTRIBUTIONAL RESULT: NES's flatness to N=1000 is the ASYNC SOURCE,
+         not the parser. If instead it stays flat to N=1000, the async source is not what buys
+         the scaling and the credit goes to the engine's task model -- equally publishable.
+         Either way, record it as an observation, never as the experiment's purpose.
+
+    READING THE RESULTS: quote throughput_mbps (the cross-query wall-span aggregate).
+    throughput_mrows_s and input_rows are PER-QUERY and MEANINGLESS at N>1.
+    `repetitions` is per-experiment in pbench, so pool the run_groups from the `runs` table --
+    pbench's aggregated view is scoped to the LATEST run_group only.
+
+    PRE-FLIGHT: pkill -x main; ulimit -n 65536 (N=1000 needs >2000 fds, soft default 1024, and
+    this was LOAD-BEARING for both the NES and Spark arms); governor performance (SILENTLY RESETS
+    TO ondemand ON EVERY REBOOT); warm the csv; vcgencmd get_throttled before AND after (sticky
+    bits clear only on reboot, so the DIFF is the valid test). Run with `pbench run --detach`.
+    Do NOT wait on it with pgrep -f "pbench run" -- the waiting shell's own command line matches
+    itself forever. Resource sampler: /home/pi/powertest/naive_sampler.sh -> naive_scale.tsv
+    (worker RSS, THREAD COUNT -- the thread-per-source risk -- fds, temp, throttle).
+  primary_metric: throughput_mbps
+  higher_is_better: true
+  repetitions: 1
+  aggregation: median
+
+defaults:
+  system: nebulastream
+  branch: benchmark-piparse-lazyparse-fast-csv
+  mode: worker-cli
+  build: native
+  data_size: csv
+  topology: single-node
+  warm_read: true
+  completion_timeout_s: 21600
+  query_mix:
+    - nexmark/matrix/bidstr_q0
+    - nexmark/matrix/bidstr_qproject
+    - nexmark/matrix/bidstr_qroute
+    - nexmark/matrix/bidstr_q1
+    - nexmark/matrix/bidstr_q2og
+    - nexmark/matrix/bidstr_q2mod
+    - nexmark/matrix/bidstr_q10
+    - nexmark/matrix/bidstr_q14
+    - nexmark/matrix/bidstr_q22
+    - nexmark/matrix/bidstr_qex
+  worker:
+    query_engine:
+      number_of_worker_threads: 3
+      number_of_io_threads: 1
+      invoke_mode_configuration: fnattr
+      pin_threads: false
+      ccx_aware_task_queues: false
+      admission_queue_size: 1024
+    default_query_execution:
+      operator_buffer_size: 131072
+      execution_mode: COMPILER
+    number_of_buffers_in_global_buffer_manager: 16384
+    dump_compilation_result: NONE
+  query_config:
+    source_type: BlockingFile
+    sink_type: Monitoring
+    input_formatter: { type: SequentialUncompiledOldCSV, threading_mode: sequential }
+    input_parser: {}
+    output_formatter: { type: JSONUncompiled }
+    output_parser: {}
+  generator:
+    repeat: 1
+  worker_env:
+    NES_MMAP_POPULATE: "1"
+    NES_INPUT_CODEC: original
+    NES_OUTPUT_CODEC: original
+
+variants:
+  - name: mix
+    description: "NES-Naive: heterogeneous 10-query stateless mix, csv->json, BlockingFile, W3, over N concurrent sources"
+    query: nexmark/matrix/bidstr_q0
+    axes:
+      x:
+        label: "Concurrent Queries (= Concurrent Sources)"
+        parameter: num_queries
+        values: [500]
+    y:
+      metric: throughput_mbps
+      label: "Aggregate throughput (MB/s, csv input bytes)"
+    visualization:
+      type: line_chart
+      x_scale: log

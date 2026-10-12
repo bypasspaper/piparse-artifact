@@ -1,0 +1,2828 @@
+run_group: 20260828T102231-6300a167
+
+Experiment: serde_micro_int_full (300 runs)
+  [1/300] k1/no_serde x=single-node rep=1 [serde_micro/intk1]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: swift_haflinger
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_8gn63psq
+ → 54.2 MB/s
+  [2/300] k1/no_serde x=single-node rep=2 [serde_micro/intk1]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: proud_clydesdale
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_42bmfngc
+ → 53.8 MB/s
+  [3/300] k1/no_serde x=single-node rep=3 [serde_micro/intk1]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: dashing_lipizzaner
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_jymyunqw
+ → 55.4 MB/s
+  [4/300] k1/only_deser x=single-node rep=1 [serde_micro/intk1]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: magnificent_warmblood
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_e3n5txkn
+ → 35.7 MB/s
+  [5/300] k1/only_deser x=single-node rep=2 [serde_micro/intk1]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: strong_thoroughbred
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_k38e09dd
+ → 35.2 MB/s
+  [6/300] k1/only_deser x=single-node rep=3 [serde_micro/intk1]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: majestic_shetland
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_h1nf31b0
+ → 35.3 MB/s
+  [7/300] k1/only_ser x=single-node rep=1 [serde_micro/intk1]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: agile_friesian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_zmw20dyh
+ → 14.0 MB/s
+  [8/300] k1/only_ser x=single-node rep=2 [serde_micro/intk1]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: radiant_hanoverian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_4b2v6_fa
+ → 14.0 MB/s
+  [9/300] k1/only_ser x=single-node rep=3 [serde_micro/intk1]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: elegant_thoroughbred
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_pv5dj_wq
+ → 14.0 MB/s
+  [10/300] k1/serde x=single-node rep=1 [serde_micro/intk1]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: proud_quarter
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_ssr17cu7
+ → 15.1 MB/s
+  [11/300] k1/serde x=single-node rep=2 [serde_micro/intk1]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: charging_welsh
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_o7i5k4bi
+ → 16.0 MB/s
+  [12/300] k1/serde x=single-node rep=3 [serde_micro/intk1]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: gentle_tennessee
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_qjh8ykxs
+ → 16.1 MB/s
+  [13/300] k1/serde_naive x=single-node rep=1 [serde_micro/intk1]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: dashing_hanoverian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_urov78do
+ → 27.8 MB/s
+  [14/300] k1/serde_naive x=single-node rep=2 [serde_micro/intk1]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: swift_hanoverian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_ctgmfn8u
+ → 27.6 MB/s
+  [15/300] k1/serde_naive x=single-node rep=3 [serde_micro/intk1]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: charging_appaloosa
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_nr0xcf3t
+ → 28.1 MB/s
+  [16/300] k2/no_serde x=single-node rep=1 [serde_micro/intk2]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: loyal_mustang
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_ywt_vjje
+ → 74.1 MB/s
+  [17/300] k2/no_serde x=single-node rep=2 [serde_micro/intk2]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: graceful_palomino
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_d4ite_ix
+ → 73.9 MB/s
+  [18/300] k2/no_serde x=single-node rep=3 [serde_micro/intk2]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: strong_belgian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_cevzikeo
+ → 73.5 MB/s
+  [19/300] k2/only_deser x=single-node rep=1 [serde_micro/intk2]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: gentle_percheron
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_f4dipvae
+ → 46.5 MB/s
+  [20/300] k2/only_deser x=single-node rep=2 [serde_micro/intk2]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: noble_mustang
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_c2u3p2zb
+ → 46.6 MB/s
+  [21/300] k2/only_deser x=single-node rep=3 [serde_micro/intk2]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: fearless_clydesdale
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_u4zjoafv
+ → 46.5 MB/s
+  [22/300] k2/only_ser x=single-node rep=1 [serde_micro/intk2]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: prancing_arabian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_xjmzz9w2
+ → 18.1 MB/s
+  [23/300] k2/only_ser x=single-node rep=2 [serde_micro/intk2]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: swift_welsh
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_qybk51et
+ → 18.1 MB/s
+  [24/300] k2/only_ser x=single-node rep=3 [serde_micro/intk2]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: gentle_connemara
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_6wj2lnkk
+ → 18.1 MB/s
+  [25/300] k2/serde x=single-node rep=1 [serde_micro/intk2]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: swift_connemara
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_vtcp8fj3
+ → 19.9 MB/s
+  [26/300] k2/serde x=single-node rep=2 [serde_micro/intk2]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: gentle_thoroughbred
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_u3i1rv1g
+ → 19.9 MB/s
+  [27/300] k2/serde x=single-node rep=3 [serde_micro/intk2]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: bold_standardbred
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_tqnbokja
+ → 20.2 MB/s
+  [28/300] k2/serde_naive x=single-node rep=1 [serde_micro/intk2]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: gallant_clydesdale
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_klbitd0w
+ → 33.7 MB/s
+  [29/300] k2/serde_naive x=single-node rep=2 [serde_micro/intk2]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: majestic_hanoverian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_10yy4d7v
+ → 32.1 MB/s
+  [30/300] k2/serde_naive x=single-node rep=3 [serde_micro/intk2]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: wild_buckskin
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_6wt7yukv
+ → 33.9 MB/s
+  [31/300] k3/no_serde x=single-node rep=1 [serde_micro/intk3]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: graceful_arabian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon__kcrgfrm
+ → 84.1 MB/s
+  [32/300] k3/no_serde x=single-node rep=2 [serde_micro/intk3]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: fearless_hanoverian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_byt9pgxu
+ → 85.0 MB/s
+  [33/300] k3/no_serde x=single-node rep=3 [serde_micro/intk3]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: fearless_shire
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_53zwl7j8
+ → 84.2 MB/s
+  [34/300] k3/only_deser x=single-node rep=1 [serde_micro/intk3]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: magnificent_palomino
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_xsg73s01
+ → 49.8 MB/s
+  [35/300] k3/only_deser x=single-node rep=2 [serde_micro/intk3]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: graceful_morgan
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_f2mmmp1z
+ → 50.0 MB/s
+  [36/300] k3/only_deser x=single-node rep=3 [serde_micro/intk3]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: graceful_belgian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_puvwjfuo
+ → 49.9 MB/s
+  [37/300] k3/only_ser x=single-node rep=1 [serde_micro/intk3]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: brilliant_mustang
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_p3xef_rd
+ → 20.5 MB/s
+  [38/300] k3/only_ser x=single-node rep=2 [serde_micro/intk3]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: prancing_mustang
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_vphecpk0
+ → 20.5 MB/s
+  [39/300] k3/only_ser x=single-node rep=3 [serde_micro/intk3]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: noble_hanoverian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_ax22dghd
+ → 20.5 MB/s
+  [40/300] k3/serde x=single-node rep=1 [serde_micro/intk3]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: mighty_icelandic
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_nvghw06x
+ → 22.4 MB/s
+  [41/300] k3/serde x=single-node rep=2 [serde_micro/intk3]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: blazing_morgan
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_jd2974xp
+ → 22.4 MB/s
+  [42/300] k3/serde x=single-node rep=3 [serde_micro/intk3]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: soaring_hanoverian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon__99wfpfn
+ → 22.4 MB/s
+  [43/300] k3/serde_naive x=single-node rep=1 [serde_micro/intk3]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: graceful_haflinger
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon__kk8y9de
+ → 36.8 MB/s
+  [44/300] k3/serde_naive x=single-node rep=2 [serde_micro/intk3]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: blazing_paint
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_7_upk8eu
+ → 37.6 MB/s
+  [45/300] k3/serde_naive x=single-node rep=3 [serde_micro/intk3]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: dashing_shire
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_ef8_5w41
+ → 37.7 MB/s
+  [46/300] k4/no_serde x=single-node rep=1 [serde_micro/intk4]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: dashing_buckskin
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_0awt7r6j
+ → 91.5 MB/s
+  [47/300] k4/no_serde x=single-node rep=2 [serde_micro/intk4]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: bold_icelandic
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_p3qtxcxo
+ → 90.8 MB/s
+  [48/300] k4/no_serde x=single-node rep=3 [serde_micro/intk4]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: charging_belgian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_n4i85xx3
+ → 91.3 MB/s
+  [49/300] k4/only_deser x=single-node rep=1 [serde_micro/intk4]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: spirited_connemara
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_cc4mtsb3
+ → 51.0 MB/s
+  [50/300] k4/only_deser x=single-node rep=2 [serde_micro/intk4]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: dashing_tennessee
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_kmrmhxnc
+ → 51.0 MB/s
+  [51/300] k4/only_deser x=single-node rep=3 [serde_micro/intk4]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: gentle_shetland
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_hasptdws
+ → 51.0 MB/s
+  [52/300] k4/only_ser x=single-node rep=1 [serde_micro/intk4]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: fearless_percheron
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_5wn63ez9
+ → 22.1 MB/s
+  [53/300] k4/only_ser x=single-node rep=2 [serde_micro/intk4]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: gentle_shetland
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_1ildszor
+ → 22.2 MB/s
+  [54/300] k4/only_ser x=single-node rep=3 [serde_micro/intk4]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: regal_lipizzaner
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_h_nhbxl4
+ → 22.2 MB/s
+  [55/300] k4/serde x=single-node rep=1 [serde_micro/intk4]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: gentle_paint
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_j22ihji4
+ → 22.9 MB/s
+  [56/300] k4/serde x=single-node rep=2 [serde_micro/intk4]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: blazing_connemara
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_qom_0xy1
+ → 22.9 MB/s
+  [57/300] k4/serde x=single-node rep=3 [serde_micro/intk4]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: blazing_friesian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_lkza8w_t
+ → 22.9 MB/s
+  [58/300] k4/serde_naive x=single-node rep=1 [serde_micro/intk4]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: dashing_percheron
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_bcs_ha22
+ → 39.7 MB/s
+  [59/300] k4/serde_naive x=single-node rep=2 [serde_micro/intk4]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: magnificent_standardbred
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_v0gfizrk
+ → 38.3 MB/s
+  [60/300] k4/serde_naive x=single-node rep=3 [serde_micro/intk4]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: radiant_andalusian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_duj42gb5
+ → 39.5 MB/s
+  [61/300] k5/no_serde x=single-node rep=1 [serde_micro/intk5]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: elegant_shire
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_t02r2hxh
+ → 105.5 MB/s
+  [62/300] k5/no_serde x=single-node rep=2 [serde_micro/intk5]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: valiant_percheron
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_togf6am_
+ → 105.6 MB/s
+  [63/300] k5/no_serde x=single-node rep=3 [serde_micro/intk5]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: blazing_thoroughbred
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_hcg006bf
+ → 105.2 MB/s
+  [64/300] k5/only_deser x=single-node rep=1 [serde_micro/intk5]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: fierce_quarter
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_6gz7mtlw
+ → 51.6 MB/s
+  [65/300] k5/only_deser x=single-node rep=2 [serde_micro/intk5]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: swift_belgian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_tpversuk
+ → 51.4 MB/s
+  [66/300] k5/only_deser x=single-node rep=3 [serde_micro/intk5]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: blazing_buckskin
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_k_wtwxr8
+ → 51.4 MB/s
+  [67/300] k5/only_ser x=single-node rep=1 [serde_micro/intk5]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: elegant_mustang
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_zz8w1r6t
+ → 23.5 MB/s
+  [68/300] k5/only_ser x=single-node rep=2 [serde_micro/intk5]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: fearless_arabian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_8vejhzct
+ → 23.5 MB/s
+  [69/300] k5/only_ser x=single-node rep=3 [serde_micro/intk5]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: valiant_shire
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_801ptzut
+ → 23.4 MB/s
+  [70/300] k5/serde x=single-node rep=1 [serde_micro/intk5]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: spirited_quarter
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_2bpm8ke7
+ → 23.4 MB/s
+  [71/300] k5/serde x=single-node rep=2 [serde_micro/intk5]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: free_buckskin
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_ws0yvtkh
+ → 23.3 MB/s
+  [72/300] k5/serde x=single-node rep=3 [serde_micro/intk5]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: spirited_shetland
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_yh8alswv
+ → 23.4 MB/s
+  [73/300] k5/serde_naive x=single-node rep=1 [serde_micro/intk5]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: noble_morgan
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_t2xv3dhb
+ → 39.9 MB/s
+  [74/300] k5/serde_naive x=single-node rep=2 [serde_micro/intk5]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: swift_shetland
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_su9hkh6w
+ → 40.0 MB/s
+  [75/300] k5/serde_naive x=single-node rep=3 [serde_micro/intk5]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: dashing_hanoverian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_6z9tz3pf
+ → 39.9 MB/s
+  [76/300] k6/no_serde x=single-node rep=1 [serde_micro/intk6]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: prancing_thoroughbred
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_fvt90vsy
+ → 110.6 MB/s
+  [77/300] k6/no_serde x=single-node rep=2 [serde_micro/intk6]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: loyal_connemara
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_psuuxxyk
+ → 110.4 MB/s
+  [78/300] k6/no_serde x=single-node rep=3 [serde_micro/intk6]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: dashing_icelandic
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_swbwbm5y
+ → 111.1 MB/s
+  [79/300] k6/only_deser x=single-node rep=1 [serde_micro/intk6]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: proud_lipizzaner
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_lrza5q3u
+ → 51.9 MB/s
+  [80/300] k6/only_deser x=single-node rep=2 [serde_micro/intk6]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: valiant_mustang
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_tdasisri
+ → 51.9 MB/s
+  [81/300] k6/only_deser x=single-node rep=3 [serde_micro/intk6]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: brave_shire
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_q8hw1jw3
+ → 52.1 MB/s
+  [82/300] k6/only_ser x=single-node rep=1 [serde_micro/intk6]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: wild_icelandic
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_l8j12qcp
+ → 24.8 MB/s
+  [83/300] k6/only_ser x=single-node rep=2 [serde_micro/intk6]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: soaring_icelandic
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_tcpfh0rt
+ → 24.8 MB/s
+  [84/300] k6/only_ser x=single-node rep=3 [serde_micro/intk6]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: wild_lipizzaner
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon__5bidg6q
+ → 24.5 MB/s
+  [85/300] k6/serde x=single-node rep=1 [serde_micro/intk6]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: brave_friesian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_7qsnhzzi
+ → 23.6 MB/s
+  [86/300] k6/serde x=single-node rep=2 [serde_micro/intk6]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: radiant_lipizzaner
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_4p6jh014
+ → 23.7 MB/s
+  [87/300] k6/serde x=single-node rep=3 [serde_micro/intk6]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: charging_haflinger
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_tzz_d11c
+ → 23.6 MB/s
+  [88/300] k6/serde_naive x=single-node rep=1 [serde_micro/intk6]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: noble_mustang
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_6fhvhfr2
+ → 41.5 MB/s
+  [89/300] k6/serde_naive x=single-node rep=2 [serde_micro/intk6]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: mighty_haflinger
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_7ocinrqr
+ → 40.9 MB/s
+  [90/300] k6/serde_naive x=single-node rep=3 [serde_micro/intk6]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: valiant_thoroughbred
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_0z74x58j
+ → 41.0 MB/s
+  [91/300] k7/no_serde x=single-node rep=1 [serde_micro/intk7]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: fierce_standardbred
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_i8ii8w3k
+ → 122.0 MB/s
+  [92/300] k7/no_serde x=single-node rep=2 [serde_micro/intk7]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: radiant_morgan
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_96dmehy1
+ → 122.0 MB/s
+  [93/300] k7/no_serde x=single-node rep=3 [serde_micro/intk7]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: gentle_thoroughbred
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_aoqh5lcp
+ → 122.8 MB/s
+  [94/300] k7/only_deser x=single-node rep=1 [serde_micro/intk7]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: radiant_friesian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_8zyuk98q
+ → 52.6 MB/s
+  [95/300] k7/only_deser x=single-node rep=2 [serde_micro/intk7]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: brave_icelandic
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_2t_vtrvw
+ → 52.6 MB/s
+  [96/300] k7/only_deser x=single-node rep=3 [serde_micro/intk7]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: regal_clydesdale
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon__s49vlwx
+ → 52.8 MB/s
+  [97/300] k7/only_ser x=single-node rep=1 [serde_micro/intk7]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: mighty_tennessee
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_cqnlg1gf
+ → 25.6 MB/s
+  [98/300] k7/only_ser x=single-node rep=2 [serde_micro/intk7]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: prancing_belgian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_3j3xp28u
+ → 25.6 MB/s
+  [99/300] k7/only_ser x=single-node rep=3 [serde_micro/intk7]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: agile_belgian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_nsx7ax4i
+ → 25.6 MB/s
+  [100/300] k7/serde x=single-node rep=1 [serde_micro/intk7]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: radiant_welsh
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_xybiyir1
+ → 24.0 MB/s
+  [101/300] k7/serde x=single-node rep=2 [serde_micro/intk7]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: wild_friesian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_ql2flmo1
+ → 24.0 MB/s
+  [102/300] k7/serde x=single-node rep=3 [serde_micro/intk7]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: graceful_tennessee
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_jif23k6u
+ → 24.0 MB/s
+  [103/300] k7/serde_naive x=single-node rep=1 [serde_micro/intk7]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: proud_thoroughbred
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_w4aaa90a
+ → 41.3 MB/s
+  [104/300] k7/serde_naive x=single-node rep=2 [serde_micro/intk7]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: brilliant_clydesdale
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_kfd0h5_j
+ → 41.4 MB/s
+  [105/300] k7/serde_naive x=single-node rep=3 [serde_micro/intk7]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: free_standardbred
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_xz9ip6i3
+ → 41.3 MB/s
+  [106/300] k8/no_serde x=single-node rep=1 [serde_micro/intk8]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: noble_tennessee
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_vfucl4i3
+ → 110.9 MB/s
+  [107/300] k8/no_serde x=single-node rep=2 [serde_micro/intk8]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: valiant_mustang
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_g523xdst
+ → 111.0 MB/s
+  [108/300] k8/no_serde x=single-node rep=3 [serde_micro/intk8]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: noble_clydesdale
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_0oywy8cu
+ → 111.1 MB/s
+  [109/300] k8/only_deser x=single-node rep=1 [serde_micro/intk8]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: brave_quarter
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_f0o27zk4
+ → 52.7 MB/s
+  [110/300] k8/only_deser x=single-node rep=2 [serde_micro/intk8]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: magnificent_clydesdale
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_ndtpq5h1
+ → 52.8 MB/s
+  [111/300] k8/only_deser x=single-node rep=3 [serde_micro/intk8]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: spirited_standardbred
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_smzaisd5
+ → 52.8 MB/s
+  [112/300] k8/only_ser x=single-node rep=1 [serde_micro/intk8]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: valiant_hanoverian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_viq1b4je
+ → 26.7 MB/s
+  [113/300] k8/only_ser x=single-node rep=2 [serde_micro/intk8]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: wild_lipizzaner
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_smzajebk
+ → 26.7 MB/s
+  [114/300] k8/only_ser x=single-node rep=3 [serde_micro/intk8]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: wild_quarter
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_11vzkit2
+ → 26.6 MB/s
+  [115/300] k8/serde x=single-node rep=1 [serde_micro/intk8]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: gentle_appaloosa
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_cxi6i6xf
+ → 24.1 MB/s
+  [116/300] k8/serde x=single-node rep=2 [serde_micro/intk8]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: magnificent_morgan
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_t6gdlk16
+ → 24.0 MB/s
+  [117/300] k8/serde x=single-node rep=3 [serde_micro/intk8]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: swift_standardbred
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_uvsgghqk
+ → 24.1 MB/s
+  [118/300] k8/serde_naive x=single-node rep=1 [serde_micro/intk8]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: gentle_buckskin
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_amxr8lg6
+ → 42.6 MB/s
+  [119/300] k8/serde_naive x=single-node rep=2 [serde_micro/intk8]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: magnificent_appaloosa
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_7ylrfmoo
+ → 43.4 MB/s
+  [120/300] k8/serde_naive x=single-node rep=3 [serde_micro/intk8]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: majestic_friesian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_2jztq2_r
+ → 43.3 MB/s
+  [121/300] k9/no_serde x=single-node rep=1 [serde_micro/intk9]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: loyal_shetland
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_0hj_vxi2
+ → 144.0 MB/s
+  [122/300] k9/no_serde x=single-node rep=2 [serde_micro/intk9]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: wild_haflinger
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_xc0poym2
+ → 144.8 MB/s
+  [123/300] k9/no_serde x=single-node rep=3 [serde_micro/intk9]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: dashing_icelandic
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_6y_w8u9k
+ → 144.6 MB/s
+  [124/300] k9/only_deser x=single-node rep=1 [serde_micro/intk9]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: agile_buckskin
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon__g93u4ac
+ → 53.1 MB/s
+  [125/300] k9/only_deser x=single-node rep=2 [serde_micro/intk9]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: free_standardbred
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_zrn10zpr
+ → 53.2 MB/s
+  [126/300] k9/only_deser x=single-node rep=3 [serde_micro/intk9]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: gallant_lipizzaner
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_qg_kfws6
+ → 53.1 MB/s
+  [127/300] k9/only_ser x=single-node rep=1 [serde_micro/intk9]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: spirited_mustang
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_sflmx_zq
+ → 27.2 MB/s
+  [128/300] k9/only_ser x=single-node rep=2 [serde_micro/intk9]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: charging_haflinger
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_y_7gyhhm
+ → 27.5 MB/s
+  [129/300] k9/only_ser x=single-node rep=3 [serde_micro/intk9]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: noble_mustang
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_w_help92
+ → 27.4 MB/s
+  [130/300] k9/serde x=single-node rep=1 [serde_micro/intk9]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: mighty_appaloosa
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_3hiomdxc
+ → 24.1 MB/s
+  [131/300] k9/serde x=single-node rep=2 [serde_micro/intk9]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: elegant_morgan
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_xhlvwccz
+ → 24.1 MB/s
+  [132/300] k9/serde x=single-node rep=3 [serde_micro/intk9]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: magnificent_connemara
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_bbv9eb4x
+ → 24.1 MB/s
+  [133/300] k9/serde_naive x=single-node rep=1 [serde_micro/intk9]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: agile_palomino
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_po0gyb68
+ → 41.9 MB/s
+  [134/300] k9/serde_naive x=single-node rep=2 [serde_micro/intk9]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: dashing_lipizzaner
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_gjwko32f
+ → 42.3 MB/s
+  [135/300] k9/serde_naive x=single-node rep=3 [serde_micro/intk9]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: spirited_standardbred
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_2ufydt5m
+ → 43.6 MB/s
+  [136/300] k10/no_serde x=single-node rep=1 [serde_micro/intk10]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: dashing_shetland
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_kg0v9jfw
+ → 147.6 MB/s
+  [137/300] k10/no_serde x=single-node rep=2 [serde_micro/intk10]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: radiant_appaloosa
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_wcf86cyr
+ → 148.9 MB/s
+  [138/300] k10/no_serde x=single-node rep=3 [serde_micro/intk10]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: brilliant_hanoverian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_f6xvoolc
+ → 149.0 MB/s
+  [139/300] k10/only_deser x=single-node rep=1 [serde_micro/intk10]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: agile_andalusian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_2c3i89t2
+ → 53.1 MB/s
+  [140/300] k10/only_deser x=single-node rep=2 [serde_micro/intk10]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: regal_belgian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_v6c5tkkk
+ → 53.1 MB/s
+  [141/300] k10/only_deser x=single-node rep=3 [serde_micro/intk10]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: noble_quarter
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_y3yc0vcy
+ → 53.1 MB/s
+  [142/300] k10/only_ser x=single-node rep=1 [serde_micro/intk10]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: dashing_haflinger
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_upf0evn7
+ → 27.5 MB/s
+  [143/300] k10/only_ser x=single-node rep=2 [serde_micro/intk10]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: agile_lipizzaner
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_zdhnhwlk
+ → 27.8 MB/s
+  [144/300] k10/only_ser x=single-node rep=3 [serde_micro/intk10]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: magnificent_tennessee
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_ohu8_x24
+ → 27.8 MB/s
+  [145/300] k10/serde x=single-node rep=1 [serde_micro/intk10]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: swift_clydesdale
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_5707508y
+ → 24.2 MB/s
+  [146/300] k10/serde x=single-node rep=2 [serde_micro/intk10]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: free_arabian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_ivyo84t7
+ → 24.3 MB/s
+  [147/300] k10/serde x=single-node rep=3 [serde_micro/intk10]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: spirited_clydesdale
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_nu0ovan_
+ → 24.3 MB/s
+  [148/300] k10/serde_naive x=single-node rep=1 [serde_micro/intk10]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: swift_shetland
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_ydwyz4jb
+ → 42.6 MB/s
+  [149/300] k10/serde_naive x=single-node rep=2 [serde_micro/intk10]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: strong_connemara
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_9ccl3rse
+ → 42.5 MB/s
+  [150/300] k10/serde_naive x=single-node rep=3 [serde_micro/intk10]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: fearless_clydesdale
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_l2_ktbpn
+ → 42.8 MB/s
+  [151/300] k11/no_serde x=single-node rep=1 [serde_micro/intk11]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: magnificent_quarter
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_n31_d0bu
+ → 145.3 MB/s
+  [152/300] k11/no_serde x=single-node rep=2 [serde_micro/intk11]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: charging_shire
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_jn3m75w8
+ → 145.5 MB/s
+  [153/300] k11/no_serde x=single-node rep=3 [serde_micro/intk11]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: valiant_buckskin
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_mxv5yiey
+ → 145.0 MB/s
+  [154/300] k11/only_deser x=single-node rep=1 [serde_micro/intk11]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: soaring_andalusian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_cf02w216
+ → 53.6 MB/s
+  [155/300] k11/only_deser x=single-node rep=2 [serde_micro/intk11]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: charging_haflinger
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_9j4xqbo0
+ → 53.7 MB/s
+  [156/300] k11/only_deser x=single-node rep=3 [serde_micro/intk11]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: soaring_shire
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_f5grg57c
+ → 53.6 MB/s
+  [157/300] k11/only_ser x=single-node rep=1 [serde_micro/intk11]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: radiant_percheron
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_rs8bz1tf
+ → 28.3 MB/s
+  [158/300] k11/only_ser x=single-node rep=2 [serde_micro/intk11]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: radiant_connemara
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_1co17oj7
+ → 28.3 MB/s
+  [159/300] k11/only_ser x=single-node rep=3 [serde_micro/intk11]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: valiant_percheron
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_9xfrhp36
+ → 28.3 MB/s
+  [160/300] k11/serde x=single-node rep=1 [serde_micro/intk11]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: swift_percheron
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_hehyzj9q
+ → 24.2 MB/s
+  [161/300] k11/serde x=single-node rep=2 [serde_micro/intk11]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: spirited_shetland
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_v8kp8x9s
+ → 24.2 MB/s
+  [162/300] k11/serde x=single-node rep=3 [serde_micro/intk11]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: magnificent_standardbred
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_ifzqpsc8
+ → 24.3 MB/s
+  [163/300] k11/serde_naive x=single-node rep=1 [serde_micro/intk11]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: swift_lipizzaner
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_u9u2im7g
+ → 42.1 MB/s
+  [164/300] k11/serde_naive x=single-node rep=2 [serde_micro/intk11]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: dashing_icelandic
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_7_4peii8
+ → 42.8 MB/s
+  [165/300] k11/serde_naive x=single-node rep=3 [serde_micro/intk11]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: gallant_clydesdale
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_9kn4_ds6
+ → 42.5 MB/s
+  [166/300] k12/no_serde x=single-node rep=1 [serde_micro/intk12]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: brilliant_connemara
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_d1mvznxg
+ → 190.3 MB/s
+  [167/300] k12/no_serde x=single-node rep=2 [serde_micro/intk12]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: majestic_shetland
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_duntr0eh
+ → 185.0 MB/s
+  [168/300] k12/no_serde x=single-node rep=3 [serde_micro/intk12]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: radiant_morgan
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_wnpag6eh
+ → 190.6 MB/s
+  [169/300] k12/only_deser x=single-node rep=1 [serde_micro/intk12]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: fearless_morgan
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_949q0onb
+ → 53.8 MB/s
+  [170/300] k12/only_deser x=single-node rep=2 [serde_micro/intk12]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: majestic_welsh
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_oqiskq6p
+ → 53.8 MB/s
+  [171/300] k12/only_deser x=single-node rep=3 [serde_micro/intk12]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: fierce_appaloosa
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_boewkvs8
+ → 53.8 MB/s
+  [172/300] k12/only_ser x=single-node rep=1 [serde_micro/intk12]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: strong_connemara
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_dd2v59r9
+ → 28.7 MB/s
+  [173/300] k12/only_ser x=single-node rep=2 [serde_micro/intk12]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: noble_shire
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_9axsrdby
+ → 28.8 MB/s
+  [174/300] k12/only_ser x=single-node rep=3 [serde_micro/intk12]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: prancing_arabian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_8a2lgk3y
+ → 28.7 MB/s
+  [175/300] k12/serde x=single-node rep=1 [serde_micro/intk12]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: graceful_lipizzaner
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_pwvcnrpe
+ → 24.3 MB/s
+  [176/300] k12/serde x=single-node rep=2 [serde_micro/intk12]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: blazing_haflinger
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_bbi0mt8q
+ → 24.4 MB/s
+  [177/300] k12/serde x=single-node rep=3 [serde_micro/intk12]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: gallant_thoroughbred
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_8hibwfrw
+ → 24.3 MB/s
+  [178/300] k12/serde_naive x=single-node rep=1 [serde_micro/intk12]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: noble_belgian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_0ml0kl0o
+ → 43.7 MB/s
+  [179/300] k12/serde_naive x=single-node rep=2 [serde_micro/intk12]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: noble_percheron
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_1e3343ix
+ → 46.1 MB/s
+  [180/300] k12/serde_naive x=single-node rep=3 [serde_micro/intk12]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: prancing_clydesdale
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_zlea_gj2
+ → 43.8 MB/s
+  [181/300] k13/no_serde x=single-node rep=1 [serde_micro/intk13]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: bold_tennessee
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_52dixou2
+ → 164.1 MB/s
+  [182/300] k13/no_serde x=single-node rep=2 [serde_micro/intk13]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: gentle_clydesdale
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_i4a81kep
+ → 164.1 MB/s
+  [183/300] k13/no_serde x=single-node rep=3 [serde_micro/intk13]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: brave_standardbred
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_wsug62in
+ → 164.3 MB/s
+  [184/300] k13/only_deser x=single-node rep=1 [serde_micro/intk13]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: proud_thoroughbred
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_9wusvm5u
+ → 54.1 MB/s
+  [185/300] k13/only_deser x=single-node rep=2 [serde_micro/intk13]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: agile_appaloosa
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_4av3hnc3
+ → 54.2 MB/s
+  [186/300] k13/only_deser x=single-node rep=3 [serde_micro/intk13]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: brilliant_paint
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_g7vk22yr
+ → 54.2 MB/s
+  [187/300] k13/only_ser x=single-node rep=1 [serde_micro/intk13]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: bold_arabian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_f32z5w99
+ → 29.2 MB/s
+  [188/300] k13/only_ser x=single-node rep=2 [serde_micro/intk13]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: mighty_friesian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_n31ga3jl
+ → 29.2 MB/s
+  [189/300] k13/only_ser x=single-node rep=3 [serde_micro/intk13]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: prancing_arabian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_rhgfjzsz
+ → 29.2 MB/s
+  [190/300] k13/serde x=single-node rep=1 [serde_micro/intk13]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: dashing_shire
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_z3h0jsdb
+ → 24.4 MB/s
+  [191/300] k13/serde x=single-node rep=2 [serde_micro/intk13]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: charging_paint
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_h8m9nugn
+ → 24.4 MB/s
+  [192/300] k13/serde x=single-node rep=3 [serde_micro/intk13]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: bold_belgian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_eyro4xa2
+ → 24.4 MB/s
+  [193/300] k13/serde_naive x=single-node rep=1 [serde_micro/intk13]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: magnificent_andalusian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_4wehr8dy
+ → 41.7 MB/s
+  [194/300] k13/serde_naive x=single-node rep=2 [serde_micro/intk13]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: swift_palomino
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_n0mzp6ms
+ → 45.3 MB/s
+  [195/300] k13/serde_naive x=single-node rep=3 [serde_micro/intk13]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: noble_lipizzaner
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_8u4icwlm
+ → 42.2 MB/s
+  [196/300] k14/no_serde x=single-node rep=1 [serde_micro/intk14]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: swift_tennessee
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_i6qvnfuq
+ → 166.1 MB/s
+  [197/300] k14/no_serde x=single-node rep=2 [serde_micro/intk14]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: free_thoroughbred
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_wdcnqaug
+ → 165.7 MB/s
+  [198/300] k14/no_serde x=single-node rep=3 [serde_micro/intk14]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: dashing_mustang
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_75e8e02v
+ → 165.8 MB/s
+  [199/300] k14/only_deser x=single-node rep=1 [serde_micro/intk14]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: gallant_warmblood
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_09u956oq
+ → 53.9 MB/s
+  [200/300] k14/only_deser x=single-node rep=2 [serde_micro/intk14]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: soaring_friesian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_via3r81u
+ → 53.9 MB/s
+  [201/300] k14/only_deser x=single-node rep=3 [serde_micro/intk14]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: wild_percheron
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_zzpa14u8
+ → 53.9 MB/s
+  [202/300] k14/only_ser x=single-node rep=1 [serde_micro/intk14]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: charging_buckskin
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_d9zv4eao
+ → 29.4 MB/s
+  [203/300] k14/only_ser x=single-node rep=2 [serde_micro/intk14]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: dashing_tennessee
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_q_lpgz0d
+ → 29.5 MB/s
+  [204/300] k14/only_ser x=single-node rep=3 [serde_micro/intk14]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: graceful_clydesdale
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_vys7tuw5
+ → 29.5 MB/s
+  [205/300] k14/serde x=single-node rep=1 [serde_micro/intk14]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: dashing_tennessee
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_7trdeo8b
+ → 24.2 MB/s
+  [206/300] k14/serde x=single-node rep=2 [serde_micro/intk14]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: regal_shetland
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_qbxa_op9
+ → 24.3 MB/s
+  [207/300] k14/serde x=single-node rep=3 [serde_micro/intk14]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: charging_morgan
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_1oly1h42
+ → 24.2 MB/s
+  [208/300] k14/serde_naive x=single-node rep=1 [serde_micro/intk14]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: blazing_shetland
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_rdd_vfwp
+ → 42.5 MB/s
+  [209/300] k14/serde_naive x=single-node rep=2 [serde_micro/intk14]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: blazing_connemara
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_07kor_67
+ → 45.6 MB/s
+  [210/300] k14/serde_naive x=single-node rep=3 [serde_micro/intk14]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: blazing_percheron
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_x7y728o1
+ → 43.3 MB/s
+  [211/300] k15/no_serde x=single-node rep=1 [serde_micro/intk15]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: loyal_percheron
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_h58_cx8c
+ → 178.9 MB/s
+  [212/300] k15/no_serde x=single-node rep=2 [serde_micro/intk15]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: fearless_belgian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_3dy637yu
+ → 180.6 MB/s
+  [213/300] k15/no_serde x=single-node rep=3 [serde_micro/intk15]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: swift_warmblood
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_b3rmpnne
+ → 179.9 MB/s
+  [214/300] k15/only_deser x=single-node rep=1 [serde_micro/intk15]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: blazing_hanoverian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_7xs_8pxc
+ → 54.2 MB/s
+  [215/300] k15/only_deser x=single-node rep=2 [serde_micro/intk15]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: swift_lipizzaner
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_g_928j2d
+ → 54.2 MB/s
+  [216/300] k15/only_deser x=single-node rep=3 [serde_micro/intk15]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: gallant_shire
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_s69m7vs0
+ → 54.2 MB/s
+  [217/300] k15/only_ser x=single-node rep=1 [serde_micro/intk15]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: charging_icelandic
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_4nv77g0w
+ → 29.8 MB/s
+  [218/300] k15/only_ser x=single-node rep=2 [serde_micro/intk15]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: strong_haflinger
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_ai2gekkq
+ → 29.5 MB/s
+  [219/300] k15/only_ser x=single-node rep=3 [serde_micro/intk15]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: blazing_mustang
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_u1kp57u5
+ → 29.6 MB/s
+  [220/300] k15/serde x=single-node rep=1 [serde_micro/intk15]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: graceful_thoroughbred
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_asr0emm7
+ → 24.3 MB/s
+  [221/300] k15/serde x=single-node rep=2 [serde_micro/intk15]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: gallant_welsh
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_6bokl1y8
+ → 24.3 MB/s
+  [222/300] k15/serde x=single-node rep=3 [serde_micro/intk15]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: majestic_connemara
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_dlb6e3q6
+ → 24.2 MB/s
+  [223/300] k15/serde_naive x=single-node rep=1 [serde_micro/intk15]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: spirited_lipizzaner
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_htuddx1n
+ → 43.6 MB/s
+  [224/300] k15/serde_naive x=single-node rep=2 [serde_micro/intk15]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: graceful_lipizzaner
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_fxg8lflg
+ → 42.9 MB/s
+  [225/300] k15/serde_naive x=single-node rep=3 [serde_micro/intk15]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: elegant_quarter
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_jhyuwsxo
+ → 43.2 MB/s
+  [226/300] k16/no_serde x=single-node rep=1 [serde_micro/intk16]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: regal_friesian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_nh_om_l6
+ → 177.5 MB/s
+  [227/300] k16/no_serde x=single-node rep=2 [serde_micro/intk16]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: elegant_belgian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_zmtdvewy
+ → 179.5 MB/s
+  [228/300] k16/no_serde x=single-node rep=3 [serde_micro/intk16]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: spirited_welsh
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_bj7ifefg
+ → 178.7 MB/s
+  [229/300] k16/only_deser x=single-node rep=1 [serde_micro/intk16]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: fearless_shetland
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_o9jm9y5b
+ → 54.0 MB/s
+  [230/300] k16/only_deser x=single-node rep=2 [serde_micro/intk16]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: fierce_haflinger
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_hphxkmha
+ → 54.0 MB/s
+  [231/300] k16/only_deser x=single-node rep=3 [serde_micro/intk16]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: swift_shire
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_451j538f
+ → 54.1 MB/s
+  [232/300] k16/only_ser x=single-node rep=1 [serde_micro/intk16]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: bold_buckskin
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_yoxbaowr
+ → 30.4 MB/s
+  [233/300] k16/only_ser x=single-node rep=2 [serde_micro/intk16]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: elegant_quarter
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_ykruu10j
+ → 30.4 MB/s
+  [234/300] k16/only_ser x=single-node rep=3 [serde_micro/intk16]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: swift_buckskin
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_2mixbbxw
+ → 30.4 MB/s
+  [235/300] k16/serde x=single-node rep=1 [serde_micro/intk16]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: spirited_connemara
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_0lr3lvtv
+ → 24.1 MB/s
+  [236/300] k16/serde x=single-node rep=2 [serde_micro/intk16]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: fierce_buckskin
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_peclk3om
+ → 24.2 MB/s
+  [237/300] k16/serde x=single-node rep=3 [serde_micro/intk16]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: majestic_shire
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_x_mvvhy0
+ → 24.1 MB/s
+  [238/300] k16/serde_naive x=single-node rep=1 [serde_micro/intk16]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: wild_palomino
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_bhrt5qrc
+ → 44.9 MB/s
+  [239/300] k16/serde_naive x=single-node rep=2 [serde_micro/intk16]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: prancing_morgan
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_6_8hphg5
+ → 43.8 MB/s
+  [240/300] k16/serde_naive x=single-node rep=3 [serde_micro/intk16]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: proud_buckskin
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_iny9gy3o
+ → 45.0 MB/s
+  [241/300] k17/no_serde x=single-node rep=1 [serde_micro/intk17]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: mighty_buckskin
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_rqbj1z9o
+ → 184.5 MB/s
+  [242/300] k17/no_serde x=single-node rep=2 [serde_micro/intk17]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: elegant_shire
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_8ybx5px_
+ → 184.4 MB/s
+  [243/300] k17/no_serde x=single-node rep=3 [serde_micro/intk17]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: radiant_andalusian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_0_oiqr_w
+ → 182.0 MB/s
+  [244/300] k17/only_deser x=single-node rep=1 [serde_micro/intk17]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: fierce_mustang
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_soepixwi
+ → 54.5 MB/s
+  [245/300] k17/only_deser x=single-node rep=2 [serde_micro/intk17]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: mighty_lipizzaner
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_cfbm5ju3
+ → 54.4 MB/s
+  [246/300] k17/only_deser x=single-node rep=3 [serde_micro/intk17]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: mighty_friesian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_ah_y898o
+ → 54.4 MB/s
+  [247/300] k17/only_ser x=single-node rep=1 [serde_micro/intk17]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: strong_welsh
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_556d4lm4
+ → 29.9 MB/s
+  [248/300] k17/only_ser x=single-node rep=2 [serde_micro/intk17]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: valiant_shire
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_d6tbwg4f
+ → 30.0 MB/s
+  [249/300] k17/only_ser x=single-node rep=3 [serde_micro/intk17]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: swift_hanoverian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_kv3u4vmd
+ → 29.9 MB/s
+  [250/300] k17/serde x=single-node rep=1 [serde_micro/intk17]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: loyal_palomino
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_rz9jgukm
+ → 24.4 MB/s
+  [251/300] k17/serde x=single-node rep=2 [serde_micro/intk17]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: brilliant_paint
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_fnrgd_ie
+ → 24.4 MB/s
+  [252/300] k17/serde x=single-node rep=3 [serde_micro/intk17]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: soaring_buckskin
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_lms5stja
+ → 24.4 MB/s
+  [253/300] k17/serde_naive x=single-node rep=1 [serde_micro/intk17]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: charging_connemara
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_si4lekt8
+ → 43.7 MB/s
+  [254/300] k17/serde_naive x=single-node rep=2 [serde_micro/intk17]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: regal_welsh
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_vlwb1nl2
+ → 43.7 MB/s
+  [255/300] k17/serde_naive x=single-node rep=3 [serde_micro/intk17]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: brilliant_mustang
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_0ctqhe4b
+ → 43.9 MB/s
+  [256/300] k18/no_serde x=single-node rep=1 [serde_micro/intk18]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: blazing_palomino
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_c84j92cj
+ → 189.1 MB/s
+  [257/300] k18/no_serde x=single-node rep=2 [serde_micro/intk18]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: agile_clydesdale
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_5r1arnxb
+ → 188.9 MB/s
+  [258/300] k18/no_serde x=single-node rep=3 [serde_micro/intk18]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: dashing_percheron
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_sf4g3b7j
+ → 188.6 MB/s
+  [259/300] k18/only_deser x=single-node rep=1 [serde_micro/intk18]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: elegant_hanoverian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_czin48hw
+ → 54.2 MB/s
+  [260/300] k18/only_deser x=single-node rep=2 [serde_micro/intk18]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: fearless_welsh
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_zy9uns6i
+ → 54.2 MB/s
+  [261/300] k18/only_deser x=single-node rep=3 [serde_micro/intk18]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: elegant_thoroughbred
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_9bs3igcj
+ → 54.2 MB/s
+  [262/300] k18/only_ser x=single-node rep=1 [serde_micro/intk18]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: swift_morgan
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_cye9zuxi
+ → 30.1 MB/s
+  [263/300] k18/only_ser x=single-node rep=2 [serde_micro/intk18]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: mighty_warmblood
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_pzqg_81b
+ → 30.2 MB/s
+  [264/300] k18/only_ser x=single-node rep=3 [serde_micro/intk18]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: swift_standardbred
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_3gzta66g
+ → 30.1 MB/s
+  [265/300] k18/serde x=single-node rep=1 [serde_micro/intk18]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: elegant_mustang
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_11kg3x5u
+ → 24.4 MB/s
+  [266/300] k18/serde x=single-node rep=2 [serde_micro/intk18]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: loyal_paint
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_ziqb73hp
+ → 24.5 MB/s
+  [267/300] k18/serde x=single-node rep=3 [serde_micro/intk18]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: bold_shetland
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_yfx7vdgs
+ → 24.4 MB/s
+  [268/300] k18/serde_naive x=single-node rep=1 [serde_micro/intk18]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: wild_paint
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_pejfzw_z
+ → 43.3 MB/s
+  [269/300] k18/serde_naive x=single-node rep=2 [serde_micro/intk18]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: blazing_morgan
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_6ogs0z2_
+ → 44.4 MB/s
+  [270/300] k18/serde_naive x=single-node rep=3 [serde_micro/intk18]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: gallant_tennessee
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_7djm6ffj
+ → 44.2 MB/s
+  [271/300] k19/no_serde x=single-node rep=1 [serde_micro/intk19]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: mighty_percheron
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon__n2to514
+ → 200.2 MB/s
+  [272/300] k19/no_serde x=single-node rep=2 [serde_micro/intk19]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: loyal_appaloosa
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_clvyd0bz
+ → 199.8 MB/s
+  [273/300] k19/no_serde x=single-node rep=3 [serde_micro/intk19]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: swift_welsh
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_56yhqvrj
+ → 198.5 MB/s
+  [274/300] k19/only_deser x=single-node rep=1 [serde_micro/intk19]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: wild_buckskin
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_cbezeroz
+ → 54.2 MB/s
+  [275/300] k19/only_deser x=single-node rep=2 [serde_micro/intk19]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: noble_shire
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_my74j_xl
+ → 54.2 MB/s
+  [276/300] k19/only_deser x=single-node rep=3 [serde_micro/intk19]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: strong_welsh
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_62wcpzng
+ → 54.2 MB/s
+  [277/300] k19/only_ser x=single-node rep=1 [serde_micro/intk19]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: bold_clydesdale
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_w1amd1pm
+ → 30.4 MB/s
+  [278/300] k19/only_ser x=single-node rep=2 [serde_micro/intk19]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: swift_tennessee
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_vm_3joad
+ → 30.4 MB/s
+  [279/300] k19/only_ser x=single-node rep=3 [serde_micro/intk19]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: magnificent_belgian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_49hleo1w
+ → 30.4 MB/s
+  [280/300] k19/serde x=single-node rep=1 [serde_micro/intk19]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: spirited_clydesdale
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_rnunv6h4
+ → 24.4 MB/s
+  [281/300] k19/serde x=single-node rep=2 [serde_micro/intk19]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: gentle_appaloosa
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_lce3753u
+ → 24.4 MB/s
+  [282/300] k19/serde x=single-node rep=3 [serde_micro/intk19]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: loyal_connemara
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_a4gl1f0m
+ → 24.3 MB/s
+  [283/300] k19/serde_naive x=single-node rep=1 [serde_micro/intk19]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: bold_belgian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_btalaepv
+ → 42.3 MB/s
+  [284/300] k19/serde_naive x=single-node rep=2 [serde_micro/intk19]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: elegant_shetland
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_uc3ocai9
+ → 46.4 MB/s
+  [285/300] k19/serde_naive x=single-node rep=3 [serde_micro/intk19]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: wild_quarter
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_ljlwcgfc
+ → 42.7 MB/s
+  [286/300] k20/no_serde x=single-node rep=1 [serde_micro/intk20]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: regal_clydesdale
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_x620u7x1
+ → 199.0 MB/s
+  [287/300] k20/no_serde x=single-node rep=2 [serde_micro/intk20]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: gentle_arabian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_i81vwq4g
+ → 198.8 MB/s
+  [288/300] k20/no_serde x=single-node rep=3 [serde_micro/intk20]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: noble_friesian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_qhb8jblx
+ → 199.2 MB/s
+  [289/300] k20/only_deser x=single-node rep=1 [serde_micro/intk20]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: mighty_buckskin
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_kco_fbw0
+ → 54.5 MB/s
+  [290/300] k20/only_deser x=single-node rep=2 [serde_micro/intk20]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: mighty_friesian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_w2z8rwha
+ → 54.5 MB/s
+  [291/300] k20/only_deser x=single-node rep=3 [serde_micro/intk20]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: soaring_shetland
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_y15n45yq
+ → 54.4 MB/s
+  [292/300] k20/only_ser x=single-node rep=1 [serde_micro/intk20]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: swift_buckskin
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_77fckg31
+ → 30.6 MB/s
+  [293/300] k20/only_ser x=single-node rep=2 [serde_micro/intk20]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: regal_clydesdale
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_slsbflbn
+ → 30.7 MB/s
+  [294/300] k20/only_ser x=single-node rep=3 [serde_micro/intk20]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: majestic_mustang
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_x_r5reez
+ → 30.6 MB/s
+  [295/300] k20/serde x=single-node rep=1 [serde_micro/intk20]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: charging_tennessee
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_hw94wf4p
+ → 24.4 MB/s
+  [296/300] k20/serde x=single-node rep=2 [serde_micro/intk20]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: soaring_arabian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon__h4gsbhi
+ → 24.5 MB/s
+  [297/300] k20/serde x=single-node rep=3 [serde_micro/intk20]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: free_mustang
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_j290orlu
+ → 24.5 MB/s
+  [298/300] k20/serde_naive x=single-node rep=1 [serde_micro/intk20]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: majestic_mustang
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_g4m76qi1
+ → 43.5 MB/s
+  [299/300] k20/serde_naive x=single-node rep=2 [serde_micro/intk20]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: gallant_arabian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_kdo7921w
+ → 42.1 MB/s
+  [300/300] k20/serde_naive x=single-node rep=3 [serde_micro/intk20]  [cache] ignored: source_type=InMemory is not a File source
+  nes-cli start stdout: regal_belgian
+  nes-cli start stderr: DIAG_PARSE parse_cpu~0.0000s calls=0 sampled=0 (1/1024)
+DIAG_FRAGSHREDDER shred_cpu=0.0000s calls=0
+DIAG_SHREDDER shred_cpu=0.0000s calls=0
+DIAG_CSVINDEX index_cpu=0.0000s calls=0
+DIAG_SIMDINDEX index_cpu=0.0000s calls=0
+  [PBENCH_KEEP_LOGS] run logs kept in /tmp/pbench_mon_ucvqfh_v
+ → 43.3 MB/s
+
+Done: 300 completed, 0 failed
+
+Results for 'serde_micro_int_full' (100 data points):
+
+  Variant: k1
+    no_serde             x=single-node  throughput=54.2 MB/s  6.8 Mrows/s  (n=3) [serde_micro/intk1]
+    only_deser           x=single-node  throughput=35.3 MB/s  3.7 Mrows/s  (n=3) [serde_micro/intk1]
+    only_ser             x=single-node  throughput=14.0 MB/s  1.7 Mrows/s  (n=3) [serde_micro/intk1]
+    serde                x=single-node  throughput=16.0 MB/s  1.7 Mrows/s  (n=3) [serde_micro/intk1]
+    serde_naive          x=single-node  throughput=27.8 MB/s  2.9 Mrows/s  (n=3) [serde_micro/intk1]
+  Variant: k10
+    no_serde             x=single-node  throughput=148.9 MB/s  1.9 Mrows/s  (n=3) [serde_micro/intk10]
+    only_deser           x=single-node  throughput=53.1 MB/s  0.5 Mrows/s  (n=3) [serde_micro/intk10]
+    only_ser             x=single-node  throughput=27.8 MB/s  0.3 Mrows/s  (n=3) [serde_micro/intk10]
+    serde                x=single-node  throughput=24.3 MB/s  0.2 Mrows/s  (n=3) [serde_micro/intk10]
+    serde_naive          x=single-node  throughput=42.6 MB/s  0.4 Mrows/s  (n=3) [serde_micro/intk10]
+  Variant: k11
+    no_serde             x=single-node  throughput=145.3 MB/s  1.7 Mrows/s  (n=3) [serde_micro/intk11]
+    only_deser           x=single-node  throughput=53.6 MB/s  0.5 Mrows/s  (n=3) [serde_micro/intk11]
+    only_ser             x=single-node  throughput=28.3 MB/s  0.3 Mrows/s  (n=3) [serde_micro/intk11]
+    serde                x=single-node  throughput=24.2 MB/s  0.2 Mrows/s  (n=3) [serde_micro/intk11]
+    serde_naive          x=single-node  throughput=42.5 MB/s  0.4 Mrows/s  (n=3) [serde_micro/intk11]
+  Variant: k12
+    no_serde             x=single-node  throughput=190.3 MB/s  2.0 Mrows/s  (n=3) [serde_micro/intk12]
+    only_deser           x=single-node  throughput=53.8 MB/s  0.5 Mrows/s  (n=3) [serde_micro/intk12]
+    only_ser             x=single-node  throughput=28.7 MB/s  0.3 Mrows/s  (n=3) [serde_micro/intk12]
+    serde                x=single-node  throughput=24.3 MB/s  0.2 Mrows/s  (n=3) [serde_micro/intk12]
+    serde_naive          x=single-node  throughput=43.8 MB/s  0.4 Mrows/s  (n=3) [serde_micro/intk12]
+  Variant: k13
+    no_serde             x=single-node  throughput=164.1 MB/s  1.6 Mrows/s  (n=3) [serde_micro/intk13]
+    only_deser           x=single-node  throughput=54.2 MB/s  0.4 Mrows/s  (n=3) [serde_micro/intk13]
+    only_ser             x=single-node  throughput=29.2 MB/s  0.3 Mrows/s  (n=3) [serde_micro/intk13]
+    serde                x=single-node  throughput=24.4 MB/s  0.2 Mrows/s  (n=3) [serde_micro/intk13]
+    serde_naive          x=single-node  throughput=42.2 MB/s  0.3 Mrows/s  (n=3) [serde_micro/intk13]
+  Variant: k14
+    no_serde             x=single-node  throughput=165.8 MB/s  1.5 Mrows/s  (n=3) [serde_micro/intk14]
+    only_deser           x=single-node  throughput=53.9 MB/s  0.4 Mrows/s  (n=3) [serde_micro/intk14]
+    only_ser             x=single-node  throughput=29.5 MB/s  0.3 Mrows/s  (n=3) [serde_micro/intk14]
+    serde                x=single-node  throughput=24.2 MB/s  0.2 Mrows/s  (n=3) [serde_micro/intk14]
+    serde_naive          x=single-node  throughput=43.3 MB/s  0.3 Mrows/s  (n=3) [serde_micro/intk14]
+  Variant: k15
+    no_serde             x=single-node  throughput=179.9 MB/s  1.5 Mrows/s  (n=3) [serde_micro/intk15]
+    only_deser           x=single-node  throughput=54.2 MB/s  0.4 Mrows/s  (n=3) [serde_micro/intk15]
+    only_ser             x=single-node  throughput=29.6 MB/s  0.2 Mrows/s  (n=3) [serde_micro/intk15]
+    serde                x=single-node  throughput=24.3 MB/s  0.2 Mrows/s  (n=3) [serde_micro/intk15]
+    serde_naive          x=single-node  throughput=43.2 MB/s  0.3 Mrows/s  (n=3) [serde_micro/intk15]
+  Variant: k16
+    no_serde             x=single-node  throughput=178.7 MB/s  1.4 Mrows/s  (n=3) [serde_micro/intk16]
+    only_deser           x=single-node  throughput=54.0 MB/s  0.3 Mrows/s  (n=3) [serde_micro/intk16]
+    only_ser             x=single-node  throughput=30.4 MB/s  0.2 Mrows/s  (n=3) [serde_micro/intk16]
+    serde                x=single-node  throughput=24.1 MB/s  0.2 Mrows/s  (n=3) [serde_micro/intk16]
+    serde_naive          x=single-node  throughput=44.9 MB/s  0.3 Mrows/s  (n=3) [serde_micro/intk16]
+  Variant: k17
+    no_serde             x=single-node  throughput=184.4 MB/s  1.4 Mrows/s  (n=3) [serde_micro/intk17]
+    only_deser           x=single-node  throughput=54.4 MB/s  0.3 Mrows/s  (n=3) [serde_micro/intk17]
+    only_ser             x=single-node  throughput=29.9 MB/s  0.2 Mrows/s  (n=3) [serde_micro/intk17]
+    serde                x=single-node  throughput=24.4 MB/s  0.1 Mrows/s  (n=3) [serde_micro/intk17]
+    serde_naive          x=single-node  throughput=43.7 MB/s  0.3 Mrows/s  (n=3) [serde_micro/intk17]
+  Variant: k18
+    no_serde             x=single-node  throughput=188.9 MB/s  1.3 Mrows/s  (n=3) [serde_micro/intk18]
+    only_deser           x=single-node  throughput=54.2 MB/s  0.3 Mrows/s  (n=3) [serde_micro/intk18]
+    only_ser             x=single-node  throughput=30.1 MB/s  0.2 Mrows/s  (n=3) [serde_micro/intk18]
+    serde                x=single-node  throughput=24.4 MB/s  0.1 Mrows/s  (n=3) [serde_micro/intk18]
+    serde_naive          x=single-node  throughput=44.2 MB/s  0.2 Mrows/s  (n=3) [serde_micro/intk18]
+  Variant: k19
+    no_serde             x=single-node  throughput=199.8 MB/s  1.3 Mrows/s  (n=3) [serde_micro/intk19]
+    only_deser           x=single-node  throughput=54.2 MB/s  0.3 Mrows/s  (n=3) [serde_micro/intk19]
+    only_ser             x=single-node  throughput=30.4 MB/s  0.2 Mrows/s  (n=3) [serde_micro/intk19]
+    serde                x=single-node  throughput=24.4 MB/s  0.1 Mrows/s  (n=3) [serde_micro/intk19]
+    serde_naive          x=single-node  throughput=42.7 MB/s  0.2 Mrows/s  (n=3) [serde_micro/intk19]
+  Variant: k2
+    no_serde             x=single-node  throughput=73.9 MB/s  4.6 Mrows/s  (n=3) [serde_micro/intk2]
+    only_deser           x=single-node  throughput=46.5 MB/s  2.4 Mrows/s  (n=3) [serde_micro/intk2]
+    only_ser             x=single-node  throughput=18.1 MB/s  1.1 Mrows/s  (n=3) [serde_micro/intk2]
+    serde                x=single-node  throughput=19.9 MB/s  1.0 Mrows/s  (n=3) [serde_micro/intk2]
+    serde_naive          x=single-node  throughput=33.7 MB/s  1.7 Mrows/s  (n=3) [serde_micro/intk2]
+  Variant: k20
+    no_serde             x=single-node  throughput=199.0 MB/s  1.2 Mrows/s  (n=3) [serde_micro/intk20]
+    only_deser           x=single-node  throughput=54.5 MB/s  0.3 Mrows/s  (n=3) [serde_micro/intk20]
+    only_ser             x=single-node  throughput=30.6 MB/s  0.2 Mrows/s  (n=3) [serde_micro/intk20]
+    serde                x=single-node  throughput=24.5 MB/s  0.1 Mrows/s  (n=3) [serde_micro/intk20]
+    serde_naive          x=single-node  throughput=43.3 MB/s  0.2 Mrows/s  (n=3) [serde_micro/intk20]
+  Variant: k3
+    no_serde             x=single-node  throughput=84.2 MB/s  3.5 Mrows/s  (n=3) [serde_micro/intk3]
+    only_deser           x=single-node  throughput=49.9 MB/s  1.7 Mrows/s  (n=3) [serde_micro/intk3]
+    only_ser             x=single-node  throughput=20.5 MB/s  0.9 Mrows/s  (n=3) [serde_micro/intk3]
+    serde                x=single-node  throughput=22.4 MB/s  0.8 Mrows/s  (n=3) [serde_micro/intk3]
+    serde_naive          x=single-node  throughput=37.6 MB/s  1.3 Mrows/s  (n=3) [serde_micro/intk3]
+  Variant: k4
+    no_serde             x=single-node  throughput=91.3 MB/s  2.9 Mrows/s  (n=3) [serde_micro/intk4]
+    only_deser           x=single-node  throughput=51.0 MB/s  1.3 Mrows/s  (n=3) [serde_micro/intk4]
+    only_ser             x=single-node  throughput=22.2 MB/s  0.7 Mrows/s  (n=3) [serde_micro/intk4]
+    serde                x=single-node  throughput=22.9 MB/s  0.6 Mrows/s  (n=3) [serde_micro/intk4]
+    serde_naive          x=single-node  throughput=39.5 MB/s  1.0 Mrows/s  (n=3) [serde_micro/intk4]
+  Variant: k5
+    no_serde             x=single-node  throughput=105.5 MB/s  2.6 Mrows/s  (n=3) [serde_micro/intk5]
+    only_deser           x=single-node  throughput=51.4 MB/s  1.0 Mrows/s  (n=3) [serde_micro/intk5]
+    only_ser             x=single-node  throughput=23.5 MB/s  0.6 Mrows/s  (n=3) [serde_micro/intk5]
+    serde                x=single-node  throughput=23.4 MB/s  0.5 Mrows/s  (n=3) [serde_micro/intk5]
+    serde_naive          x=single-node  throughput=39.9 MB/s  0.8 Mrows/s  (n=3) [serde_micro/intk5]
+  Variant: k6
+    no_serde             x=single-node  throughput=110.6 MB/s  2.3 Mrows/s  (n=3) [serde_micro/intk6]
+    only_deser           x=single-node  throughput=51.9 MB/s  0.9 Mrows/s  (n=3) [serde_micro/intk6]
+    only_ser             x=single-node  throughput=24.8 MB/s  0.5 Mrows/s  (n=3) [serde_micro/intk6]
+    serde                x=single-node  throughput=23.6 MB/s  0.4 Mrows/s  (n=3) [serde_micro/intk6]
+    serde_naive          x=single-node  throughput=41.0 MB/s  0.7 Mrows/s  (n=3) [serde_micro/intk6]
+  Variant: k7
+    no_serde             x=single-node  throughput=122.0 MB/s  2.2 Mrows/s  (n=3) [serde_micro/intk7]
+    only_deser           x=single-node  throughput=52.6 MB/s  0.8 Mrows/s  (n=3) [serde_micro/intk7]
+    only_ser             x=single-node  throughput=25.6 MB/s  0.5 Mrows/s  (n=3) [serde_micro/intk7]
+    serde                x=single-node  throughput=24.0 MB/s  0.3 Mrows/s  (n=3) [serde_micro/intk7]
+    serde_naive          x=single-node  throughput=41.3 MB/s  0.6 Mrows/s  (n=3) [serde_micro/intk7]
+  Variant: k8
+    no_serde             x=single-node  throughput=111.0 MB/s  1.7 Mrows/s  (n=3) [serde_micro/intk8]
+    only_deser           x=single-node  throughput=52.8 MB/s  0.7 Mrows/s  (n=3) [serde_micro/intk8]
+    only_ser             x=single-node  throughput=26.7 MB/s  0.4 Mrows/s  (n=3) [serde_micro/intk8]
+    serde                x=single-node  throughput=24.1 MB/s  0.3 Mrows/s  (n=3) [serde_micro/intk8]
+    serde_naive          x=single-node  throughput=43.3 MB/s  0.5 Mrows/s  (n=3) [serde_micro/intk8]
+  Variant: k9
+    no_serde             x=single-node  throughput=144.6 MB/s  2.0 Mrows/s  (n=3) [serde_micro/intk9]
+    only_deser           x=single-node  throughput=53.1 MB/s  0.6 Mrows/s  (n=3) [serde_micro/intk9]
+    only_ser             x=single-node  throughput=27.4 MB/s  0.4 Mrows/s  (n=3) [serde_micro/intk9]
+    serde                x=single-node  throughput=24.1 MB/s  0.3 Mrows/s  (n=3) [serde_micro/intk9]
+    serde_naive          x=single-node  throughput=42.3 MB/s  0.5 Mrows/s  (n=3) [serde_micro/intk9]

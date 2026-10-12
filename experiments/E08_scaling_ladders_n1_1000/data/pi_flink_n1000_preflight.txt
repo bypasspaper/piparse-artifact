@@ -1,0 +1,23 @@
+=== PREFLIGHT 2026-09-15T11:26:33 (Pi clock; real = +6d1h) ===
+throttled_idle: throttled=0x50005
+arm_idle: 1000011840
+arm_load: 1000011840
+throttled_load: throttled=0x50005
+     EXT5V_V volt(24)=4.71680000V
+max_current_mA: 900
+governor: ondemand
+temp: temp=47.7'C
+mem: avail=15252MB buffcache=7114MB
+procs: pbench=2 java=0 main=0
+ulimit_n: 524288
+[detached] pid=275446 log=results/logs/pbench_run_20260915T112638.log
+[detached] follow with: tail -f results/logs/pbench_run_20260915T112638.log   (ends with the 'Done:' summary)
+=== PREFLIGHT 2026-09-16T09:11:22 (Pi clock) uptime=314s ===
+max_current_mA: 5000
+throttled_idle: throttled=0x0  arm_idle: 1900016256   EXT5V_V volt(24)=5.10272000V
+UNDER 4-core LOAD: arm=2400027136  throttled=throttled=0x0   EXT5V_V volt(24)=5.10004000V  cur_freq=2400000
+governor: ondemand  temp: temp=55.4'C
+undervoltage_msgs_this_boot: 0
+mem: avail=15635MB  procs: java=0 main=0  disk: 326G free
+[detached] pid=1843 log=results/logs/pbench_run_20260916T091155.log
+[detached] follow with: tail -f results/logs/pbench_run_20260916T091155.log   (ends with the 'Done:' summary)

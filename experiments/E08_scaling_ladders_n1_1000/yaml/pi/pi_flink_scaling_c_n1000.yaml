@@ -1,0 +1,197 @@
+# SPDX-License-Identifier: Apache-2.0
+experiment:
+  name: pi_flink_scaling_c_n1000
+  description: >
+    N=1000 RE-RUN (2026-09-21) OF THE POINT THAT DIED ON 2026-08-24. pi_flink_scaling_c
+    (run_group 20260824T024940-530263c1) got N=500 (73.1 MB/s, p50 1.86 s / p99 6.5 s / p999
+    8.4 s, 24581 s wall) but N=1000 FAILED ~10 min in: "Flink driver failed (exit 1, no ELAPSED
+    marker)", Caused by: java.util.concurrent.TimeoutException: Heartbeat of TaskManager ... timed
+    out (results/logs/pbench_run_20260824T024940.log:175). The PyFlink cluster log
+    (flink312/lib/python3.12/site-packages/pyflink/log/flink-pi-python-pi-box.log)
+    shows WHY: all 1000 pipelines were RUNNING by 18:12:56, then the JVM went completely silent
+    for 87.9 s (18:12:56 -> 18:14:24, not one log line from any of ~2000 threads), after which the
+    ResourceManager, TaskExecutor and JobMaster each reported the other side's heartbeat (default
+    heartbeat.timeout 50 s) as timed out and failed every task; a second 49.9 s gap followed.
+    That is a JVM-wide stall, i.e. GC thrash on the DEFAULT heap: the gateway JVM ran with no
+    -Xmx, so MaxHeapSize = 25% of 16 GB = 3.96 GiB, which held N=500 for 6.8 h but not twice the
+    live set. Not CPU starvation (CFS with ~2000 runnable threads on 4 cores is a ~1.5 s round,
+    nowhere near 50 s).
+
+    THE FIX, two knobs + one diagnostic, via the new `flink_config:` / `flink_jvm_args:` keys
+    (renderer.py EXTRA_CONF -> the same Configuration object that carries numberOfTaskSlots;
+    runners/flink.py -> JVM_ARGS read by pyflink_gateway_server.py):
+      - flink_jvm_args -Xmx8g        : 2x heap = the root-cause fix. Budget: 8 GB heap + ~2 GB JVM
+                                       off-heap/thread stacks + 3.4 GB page cache for the CSV,
+                                       inside 16 GB.
+      - heartbeat.timeout 1800000 ms, heartbeat.interval 60000 ms, pekko.ask.timeout 600 s:
+                                       tolerance so a stall shorter than the run cannot kill the
+                                       job (single-JVM MiniCluster: nothing real to detect).
+      - -Xlog:gc* -> /home/pi/powertest/flink_n1000_gc.log: if it dies again, the GC log says
+                                       whether the heap was the wall.
+    DEVIATION FROM N<=500: those ran on the default 3.96 GiB heap and default timeouts. Heap size
+    changes GC frequency only; the timeouts change nothing measured. Governor: `ondemand` now
+    (no passwordless sudo on the box) vs `performance` for the ladder; irrelevant next to the
+    blocker below.
+
+    !!! BLOCKED 2026-09-21 -- DO NOT LAUNCH UNTIL THE POWER IS FIXED !!!
+    The fix smoke (pi_flink_scaling_fixsmoke, N=2) passed mechanically (java cmdline -Xmx8g, GC log
+    "Heap Max Capacity: 8G", row stored) but measured 55.0 MB/s where the 2026-08-24 smoke measured
+    110.9 at the same N=2. Cause is the BOX, not the patch: the Pi negotiates only 900 mA from its
+    power source (/proc/device-tree/chosen/power/max_current = 900 -> a plain USB-C port, not a PD
+    5 A supply), the 5 V input sags to ~4.65 V under load (vcgencmd pmic_read_adc EXT5V_V), the
+    kernel logs "hwmon hwmon4: Undervoltage detected!" continuously (~3000/day since this boot, real
+    time 2026-09-09 ~15:00; the Pi clock is ~6 days behind), vcgencmd get_throttled = 0x50005 and the
+    firmware caps the ARM clock at 1.0 GHz (vcgencmd measure_clock arm) while scaling_cur_freq still
+    claims 2400 MHz. The Aug-24 ladder ran with get_throttled = 0x0. A point taken now would be
+    ~2x slow AND not comparable to N<=500. Control without the new keys:
+    pi_flink_scaling_fixsmoke_ctrl (N=1,2) -- same box state: 34.2 / 53.7 MB/s vs Aug 64.4 / 110.9.
+    PRE-FLIGHT before launching: vcgencmd get_throttled == 0x0 and vcgencmd measure_clock arm
+    ~= 2400000000 under `yes >/dev/null` load; start ~/powertest/flink_n1000_sampler.sh after the
+    detached run (it exits on its own when pbench is gone).
+
+    2026-09-21: LAUNCHED 12:27 real under the throttle, KILLED 12:31 (4 min, no row stored) -- the
+    user ruled a point at a different CPU clock than the N<=500 ladder unacceptable. RULE: this
+    point is only valid in the SAME machine state as the 2026-08-24 ladder = get_throttled 0x0,
+    measure_clock arm ~2.4 GHz under load, governor performance (the ladder ran on performance;
+    needs sudo on the box). Pre-flight: ~/powertest/flink_n1000_preflight.txt shows what a FAILING
+    state looks like (0x50005, 1.0 GHz, 900 mA, 4.72 V).
+
+    LAUNCHED 2026-09-22 ~09:15 real (Pi clock 09-16 09:11) AFTER THE POWER FIX: stock 27 W supply,
+    max_current 5000 mA, get_throttled 0x0, EXT5V 5.10 V, ARM 2.4 GHz under 4-core load, 0
+    undervoltage messages this boot (pre-flight appended to ~/powertest/flink_n1000_preflight.txt).
+    Governor ondemand (holds 2400 MHz under load; the Aug ladders used performance). Watch line:
+    ~/powertest/flink_n1000_status.sh.
+
+    ---- original part-c notes follow ----
+    PART C of three: the 500 and 1000 endpoints at n=1 -- identical to pi_scaling_file_c.
+    sum(N)=1500 = ~11.5 h, of which N=1000 alone is ~7.7 h; this segment is more than half the
+    ladder's total cost. It is also the only place the num_slots = N question gets tested for real
+    (1000 task slots in one TaskManager). completion_timeout_s 43200 and PBENCH_FLINK_TIMEOUT must
+    both exceed ~27,700 s, or the run will be killed by its own budget rather than by anything Flink
+    did -- the mistake already made once on this box with NES's blocking-mmap N=1000 point.
+    CAVEAT ON THE ESTIMATE: it assumes the ~130 MB/s ceiling HOLDS to N=1000. If Flink degrades with
+    N the cost scales inversely -- at 65 MB/s this segment is 23 h, not 11.5. Re-estimate from part
+    A's N=16/20 numbers before trusting the schedule.
+
+    THE TRAP THIS CONFIG AVOIDS: `num_queries` is SILENTLY IGNORED unless the output format puts
+    the renderer in latency mode. renderer.py:759 reads
+        n_pipelines = int(config.num_queries or 1) if latency_mode else 1
+    and latency_mode is only true for flink_output_format in (latency, latency_json). So a scaling
+    sweep written with the stateless arm's `json_blackhole` would run ONE pipeline at every N and
+    silently report a flat line that means nothing. This file uses `latency_json` -- which is also
+    what the reference box's scaling arm used (Flink's real JSON encoder per row + per-readBatch
+    nanoTime stamp), so it is the comparable choice as well as the working one.
+
+    WHAT LATENCY MODE ACTUALLY BUILDS (renderer.py:978-990): N independent source->project->sink
+    pipelines submitted CONCURRENTLY as one StatementSet job, each with its OWN source table
+    `<src>__p{i}` over the same warm file and its own latency sink, at
+        parallelism = 1          (a non-splittable CSV is one reader anyway)
+        num_slots   = n_pipelines (so all N actually run at once rather than time-sharing slots)
+        size_bytes  = total_bytes * n_pipelines
+    NOTE this makes the Pi arm`s usual "parallelism 3" deviation IRRELEVANT here: the scaling arm is
+    N single-threaded pipelines by construction, and worker.query_engine.number_of_worker_threads is
+    not read in this path at all.
+
+    PREDICTION (write before running). A single Flink query on this box is a SINGLE-THREAD PARSE
+    BOUND -- pi_flink_stateless measured 64.5-112.4 MB/s per query at n=10, and the driver comment
+    records the ceiling holding at ~110 MB/s under max-efficiency config. So unlike NES, Flink
+    should GAIN from concurrency: N single-threaded pipelines should scale roughly linearly until
+    the 4 cores saturate, i.e. ~85 -> ~170 -> ~300 MB/s at N = 1 -> 2 -> 4, then flatten. Against
+    NES `File` (894 at N=1, ~1305 plateau) that is a gap NARROWING from ~10.5x to ~4.3x -- Flink
+    converting concurrency into throughput where NES is already saturated. If N=2 and N=4 do NOT
+    rise roughly linearly, either the slots are not being granted or the pipelines are serialising,
+    and the ladder must not be run until that is understood.
+
+    RISKS THIS SMOKE IS CHECKING, IN ORDER:
+      1. Does a StatementSet of N pipelines run AT ALL on this box (never tried).
+      2. Does aggregate throughput actually rise with N (i.e. are the N slots real).
+      3. Time calibration for sizing the ladder: at ~85 MB/s a single N=1 run is ~42 s, but if the
+         pipelines serialise instead of scaling, sum(N) x 3.595 GB at 85 MB/s gets expensive fast.
+      4. Memory/slot overhead. num_slots = N means N task slots in ONE TaskManager, each carrying
+         network buffers and managed memory, inside a MiniCluster whose heap this framework does
+         not size anywhere. This is the most likely thing to break at high N, which is exactly why
+         the ladder is not being launched blind.
+
+    VERSIONS: PyFlink 2.1.3 (the FROZEN version, matching the reference box) on a locally built
+    Python 3.12.14 at /home/pi/data/flink312. JDK 21 (Trixie packages no 11/17); Flink 2.1 supports
+    it. Unlike the Spark arm, the Flink engine version is NOT deviated.
+
+    RUN AS: pbench run --flink-python /home/pi/data/flink312/bin/python3 ... with
+    PBENCH_FLINK_TIMEOUT=3600 and PBENCH_KEEP_LOGS=1.
+    SMOKE CALIBRATION (2026-08-24, n=1): N=1/2/4 = 64.4 / 110.9 / 129.6 MB/s, 3 runs 0 failures.
+    Confirmed (a) the N slots are REAL -- throughput genuinely rises, pipelines are not serialising;
+    (b) the setup measures what the single-query arm measures -- at N=1 the mix runs only
+    query_mix[0] = q0, and 64.4 matches pi_flink_stateless's independent 65.8 MB/s for q0 (n=10,
+    json_blackhole) to 2%, across a different output format.
+    REFUTED: a prediction of ~linear scaling to ~300 MB/s at N=4. Increments are +46.5 then +18.7 --
+    Flink SATURATES BY N=4 at ~130 MB/s. Four pipelines plus JSON sinks plus JVM overhead already
+    oversubscribe four cores, and since aggregate throughput is wall-span based it is set by the
+    SLOWEST pipeline under contention. So both engines saturate early -- NES `File` by N=3 at
+    ~1300 MB/s, Flink by N=4 at ~130 -- and the ~10x gap does NOT close with concurrency
+    (13.9x / 11.2x / 9.9x at N = 1 / 2 / 4).
+
+    THERE IS NO EXPECTED "DEATH POINT", AND EARLIER DRAFTS OF THIS LADDER WRONGLY ASSUMED ONE.
+    nes_vs_flink_vs_spark_scaling.yaml:33 says "Flink's tail COLLAPSES past core count (~N=32-64)"
+    -- but that sits under `EXPECTATION:`, is a written prediction rather than a measured outcome,
+    and concerns TAIL LATENCY, not the engine failing. The smoke found N=1/2/4 entirely healthy,
+    and NES itself reached N=1000 without failing, so there is no demonstrated asymmetry to hunt.
+    The one real resource argument is that latency mode sets num_slots = N, so N=1000 means 1000
+    task slots in ONE TaskManager inside a MiniCluster whose heap this framework never sizes. That
+    is a reason to WATCH, not a reason to expect. If Flink fails at some N, record the N and the
+    error as an observation; do not treat a failure as the experiment's purpose.
+
+    LADDER = EXACTLY THE NES x-VALUES (pi_scaling_file_a/b/c), so the two curves overlay point for
+    point. This costs real time and the reason is worth stating plainly: Flink runs at ~130 MB/s
+    against NES's ~1305, so EVERY UNIT OF N COSTS 10x MORE -- 27.7 s per unit vs 2.75 s. NES's full
+    ladder took 2.6 h; the identical ladder for Flink is ~20 h with reps tapered as below. Reps are
+    tapered rather than the ladder truncated because Flink is flat above N=4, so medians matter only
+    in the dense low region.
+  primary_metric: throughput_mbps
+  higher_is_better: true
+  repetitions: 1
+  aggregation: median
+
+defaults:
+  system: flink
+  branch: benchmark-piparse-lazyparse-fast-csv
+  mode: flink
+  build: native
+  data_size: csv
+  topology: single-node
+  warm_read: true
+  completion_timeout_s: 150000
+  flink_execution_mode: streaming
+  flink_output_format: latency_json
+  # N=1000 cluster robustness + heap (see description). Nothing here changes what is measured.
+  flink_config:
+    heartbeat.interval: 60000
+    heartbeat.timeout: 1800000
+    pekko.ask.timeout: 600 s
+  flink_jvm_args: "-Xmx8g -Xlog:gc*:file=/home/pi/powertest/flink_n1000_gc.log:time,uptime,level,tags:filecount=5,filesize=50m"
+  query_mix:
+    - nexmark/matrix/bidstr_q0
+    - nexmark/matrix/bidstr_qproject
+    - nexmark/matrix/bidstr_qroute
+    - nexmark/matrix/bidstr_q1
+    - nexmark/matrix/bidstr_q2og
+    - nexmark/matrix/bidstr_q2mod
+    - nexmark/matrix/bidstr_q10
+    - nexmark/matrix/bidstr_q14
+    - nexmark/matrix/bidstr_q22
+    - nexmark/matrix/bidstr_qex
+  generator:
+    repeat: 1
+
+variants:
+  - name: mix
+    description: "Flink: N concurrent StatementSet pipelines over the 10-query mix, csv->json latency sink"
+    query: nexmark/matrix/bidstr_q0
+    axes:
+      x:
+        label: "Concurrent Queries (= Concurrent Pipelines)"
+        parameter: num_queries
+        values: [1000]
+    y:
+      metric: throughput_mbps
+      label: "Aggregate throughput (MB/s, csv input bytes)"
+    visualization: { type: line_chart, x_scale: log }

@@ -1,0 +1,224 @@
+########## BUF 4k SPAN 4k ##########
+nes-build: mode=host  build=/home/user/work/nebulastream-public/cmake-build-release
+formatter-scaling: file=bigstr_id_4k_500m.csv rawBuf=4KiB buffers=128001 bytes=500.0MiB reps=15
+drain mode: leannoemit | project: (none, parse all cols) | fnattr: off | uint64 parser: DefaultUINT64 | allow_commas: default(true)
+
+=== sequence_shredder_mode = LOCK_FREE (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        8 |  5.301 |   1.00x | min..max  5.136.. 5.585 (spread    8%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       16 |  6.206 |   1.17x | min..max  5.831.. 7.986 (spread   35%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       24 |  4.600 |   0.87x | min..max  4.380.. 7.992 (spread   79%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+
+=== sequence_shredder_mode = LOCKING (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        8 |  2.919 |   1.00x | min..max  2.517.. 3.248 (spread   25%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       16 |  3.066 |   1.05x | min..max  2.775.. 3.309 (spread   17%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       24 |  2.700 |   0.92x | min..max  2.475.. 2.949 (spread   18%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+########## BUF 4k SPAN 16k ##########
+nes-build: mode=host  build=/home/user/work/nebulastream-public/cmake-build-release
+formatter-scaling: file=bigstr_id_16k_500m.csv rawBuf=4KiB buffers=128003 bytes=500.0MiB reps=15
+drain mode: leannoemit | project: (none, parse all cols) | fnattr: off | uint64 parser: DefaultUINT64 | allow_commas: default(true)
+
+=== sequence_shredder_mode = LOCK_FREE (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        8 |  6.399 |   1.00x | min..max  6.090.. 6.758 (spread   10%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       16 |  8.691 |   1.36x | min..max  6.485.. 9.643 (spread   36%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       24 |  7.618 |   1.19x | min..max  6.246.. 9.907 (spread   48%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+
+=== sequence_shredder_mode = LOCKING (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        8 |  3.523 |   1.00x | min..max  3.302.. 3.651 (spread   10%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       16 |  3.955 |   1.12x | min..max  3.691.. 4.106 (spread   11%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       24 |  3.649 |   1.04x | min..max  3.389.. 3.688 (spread    8%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+########## BUF 4k SPAN 40k ##########
+nes-build: mode=host  build=/home/user/work/nebulastream-public/cmake-build-release
+formatter-scaling: file=bigstr_id_40k_500m.csv rawBuf=4KiB buffers=128008 bytes=500.0MiB reps=15
+drain mode: leannoemit | project: (none, parse all cols) | fnattr: off | uint64 parser: DefaultUINT64 | allow_commas: default(true)
+
+=== sequence_shredder_mode = LOCK_FREE (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        8 |  6.867 |   1.00x | min..max  6.319.. 6.948 (spread    9%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       16 |  9.342 |   1.36x | min..max  6.192..10.254 (spread   43%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       24 |  8.396 |   1.22x | min..max  5.677.. 9.660 (spread   47%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+
+=== sequence_shredder_mode = LOCKING (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        8 |  3.580 |   1.00x | min..max  3.377.. 3.819 (spread   12%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       16 |  3.762 |   1.05x | min..max  3.568.. 4.297 (spread   19%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       24 |  3.685 |   1.03x | min..max  0.567.. 3.960 (spread   92%, n=15) | repeats/pass=   173492 (135.5% of buffers)
+########## BUF 4k SPAN 80k ##########
+nes-build: mode=host  build=/home/user/work/nebulastream-public/cmake-build-release
+formatter-scaling: file=bigstr_id_80k_500m.csv rawBuf=4KiB buffers=128018 bytes=500.1MiB reps=15
+drain mode: leannoemit | project: (none, parse all cols) | fnattr: off | uint64 parser: DefaultUINT64 | allow_commas: default(true)
+
+=== sequence_shredder_mode = LOCK_FREE (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        8 |  7.051 |   1.00x | min..max  6.532.. 7.221 (spread   10%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       16 |  9.762 |   1.38x | min..max  5.930..10.120 (spread   43%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       24 |  9.099 |   1.29x | min..max  6.119..10.311 (spread   46%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+
+=== sequence_shredder_mode = LOCKING (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        8 |  3.443 |   1.00x | min..max  3.225.. 3.472 (spread    7%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       16 |  3.944 |   1.15x | min..max  3.697.. 4.100 (spread   10%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       24 |  3.885 |   1.13x | min..max  3.630.. 3.933 (spread    8%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+########## BUF 4k SPAN 160k ##########
+nes-build: mode=host  build=/home/user/work/nebulastream-public/cmake-build-release
+formatter-scaling: file=bigstr_id_160k_500m.csv rawBuf=4KiB buffers=128013 bytes=500.0MiB reps=15
+drain mode: leannoemit | project: (none, parse all cols) | fnattr: off | uint64 parser: DefaultUINT64 | allow_commas: default(true)
+
+=== sequence_shredder_mode = LOCK_FREE (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        8 |  7.177 |   1.00x | min..max  6.561.. 7.650 (spread   15%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       16 |  9.953 |   1.39x | min..max  6.164..10.498 (spread   44%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       24 |  8.535 |   1.19x | min..max  5.708..10.856 (spread   60%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+
+=== sequence_shredder_mode = LOCKING (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        8 |  3.134 |   1.00x | min..max  2.927.. 3.285 (spread   11%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       16 |  3.693 |   1.18x | min..max  3.505.. 3.905 (spread   11%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       24 |  3.898 |   1.24x | min..max  3.606.. 3.940 (spread    9%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+########## BUF 4k SPAN 320k ##########
+nes-build: mode=host  build=/home/user/work/nebulastream-public/cmake-build-release
+formatter-scaling: file=bigstr_id_320k_500m.csv rawBuf=4KiB buffers=128050 bytes=500.2MiB reps=15
+drain mode: leannoemit | project: (none, parse all cols) | fnattr: off | uint64 parser: DefaultUINT64 | allow_commas: default(true)
+
+=== sequence_shredder_mode = LOCK_FREE (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        8 |  7.544 |   1.00x | min..max  7.155.. 8.234 (spread   14%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       16 | 10.127 |   1.34x | min..max  6.031..11.137 (spread   50%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       24 |  9.875 |   1.31x | min..max  5.862..11.726 (spread   59%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+
+=== sequence_shredder_mode = LOCKING (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        8 |  3.278 |   1.00x | min..max  3.151.. 3.380 (spread    7%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       16 |  3.485 |   1.06x | min..max  3.308.. 3.875 (spread   16%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       24 |  3.594 |   1.10x | min..max  3.372.. 3.801 (spread   12%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+########## BUF 4k SPAN 640k ##########
+nes-build: mode=host  build=/home/user/work/nebulastream-public/cmake-build-release
+formatter-scaling: file=bigstr_id_640k_500m.csv rawBuf=4KiB buffers=128126 bytes=500.5MiB reps=15
+drain mode: leannoemit | project: (none, parse all cols) | fnattr: off | uint64 parser: DefaultUINT64 | allow_commas: default(true)
+
+=== sequence_shredder_mode = LOCK_FREE (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        8 |  7.455 |   1.00x | min..max  6.563.. 7.651 (spread   15%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       16 |  9.964 |   1.34x | min..max  5.621..11.338 (spread   57%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       24 | 10.115 |   1.36x | min..max  5.973..11.890 (spread   58%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+
+=== sequence_shredder_mode = LOCKING (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        8 |  3.856 |   1.00x | min..max  3.263.. 6.617 (spread   87%, n=15) | repeats/pass=     4505 (  3.5% of buffers)
+       16 |  4.104 |   1.06x | min..max  3.417.. 4.408 (spread   24%, n=15) | repeats/pass=     5432 (  4.2% of buffers)
+       24 |  3.733 |   0.97x | min..max  2.656.. 3.991 (spread   36%, n=15) | repeats/pass=    14145 ( 11.0% of buffers)
+########## BUF 8k SPAN 4k ##########
+nes-build: mode=host  build=/home/user/work/nebulastream-public/cmake-build-release
+formatter-scaling: file=bigstr_id_4k_500m.csv rawBuf=8KiB buffers=64001 bytes=500.0MiB reps=15
+drain mode: leannoemit | project: (none, parse all cols) | fnattr: off | uint64 parser: DefaultUINT64 | allow_commas: default(true)
+
+=== sequence_shredder_mode = LOCK_FREE (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        8 | 10.147 |   1.00x | min..max  9.880..10.945 (spread   11%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       16 | 12.599 |   1.24x | min..max 12.175..15.295 (spread   25%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       24 |  9.157 |   0.90x | min..max  8.869..14.886 (spread   66%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+
+=== sequence_shredder_mode = LOCKING (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        8 |  5.362 |   1.00x | min..max  4.939.. 5.582 (spread   12%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       16 |  5.702 |   1.06x | min..max  5.335.. 6.306 (spread   17%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       24 |  5.362 |   1.00x | min..max  4.963.. 5.534 (spread   11%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+########## BUF 8k SPAN 16k ##########
+nes-build: mode=host  build=/home/user/work/nebulastream-public/cmake-build-release
+formatter-scaling: file=bigstr_id_16k_500m.csv rawBuf=8KiB buffers=64002 bytes=500.0MiB reps=15
+drain mode: leannoemit | project: (none, parse all cols) | fnattr: off | uint64 parser: DefaultUINT64 | allow_commas: default(true)
+
+=== sequence_shredder_mode = LOCK_FREE (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        8 | 10.166 |   1.00x | min..max  9.952..10.528 (spread    6%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       16 | 13.979 |   1.38x | min..max 12.298..14.870 (spread   18%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       24 | 13.575 |   1.34x | min..max 11.736..15.571 (spread   28%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+
+=== sequence_shredder_mode = LOCKING (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        8 |  6.473 |   1.00x | min..max  5.868.. 6.576 (spread   11%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       16 |  6.788 |   1.05x | min..max  6.079.. 7.164 (spread   16%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       24 |  6.311 |   0.97x | min..max  4.721.. 6.597 (spread   30%, n=15) | repeats/pass=     6323 (  9.9% of buffers)
+########## BUF 8k SPAN 40k ##########
+nes-build: mode=host  build=/home/user/work/nebulastream-public/cmake-build-release
+formatter-scaling: file=bigstr_id_40k_500m.csv rawBuf=8KiB buffers=64004 bytes=500.0MiB reps=15
+drain mode: leannoemit | project: (none, parse all cols) | fnattr: off | uint64 parser: DefaultUINT64 | allow_commas: default(true)
+
+=== sequence_shredder_mode = LOCK_FREE (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        8 | 11.302 |   1.00x | min..max 11.083..11.465 (spread    3%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       16 | 15.508 |   1.37x | min..max 12.524..16.111 (spread   23%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       24 | 15.883 |   1.41x | min..max 11.471..17.276 (spread   37%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+
+=== sequence_shredder_mode = LOCKING (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        8 |  6.507 |   1.00x | min..max  6.075.. 6.725 (spread   10%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       16 |  6.984 |   1.07x | min..max  6.531.. 7.558 (spread   15%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       24 |  7.006 |   1.08x | min..max  6.603.. 7.309 (spread   10%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+########## BUF 8k SPAN 80k ##########
+nes-build: mode=host  build=/home/user/work/nebulastream-public/cmake-build-release
+formatter-scaling: file=bigstr_id_80k_500m.csv rawBuf=8KiB buffers=64009 bytes=500.1MiB reps=15
+drain mode: leannoemit | project: (none, parse all cols) | fnattr: off | uint64 parser: DefaultUINT64 | allow_commas: default(true)
+
+=== sequence_shredder_mode = LOCK_FREE (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        8 | 11.596 |   1.00x | min..max 11.163..11.678 (spread    4%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       16 | 16.006 |   1.38x | min..max 12.556..16.204 (spread   23%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       24 | 17.313 |   1.49x | min..max 11.226..17.750 (spread   38%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+
+=== sequence_shredder_mode = LOCKING (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        8 |  6.651 |   1.00x | min..max  6.183.. 6.717 (spread    8%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       16 |  7.722 |   1.16x | min..max  7.080.. 8.161 (spread   14%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       24 |  7.710 |   1.16x | min..max  6.957.. 7.813 (spread   11%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+########## BUF 8k SPAN 160k ##########
+nes-build: mode=host  build=/home/user/work/nebulastream-public/cmake-build-release
+formatter-scaling: file=bigstr_id_160k_500m.csv rawBuf=8KiB buffers=64007 bytes=500.0MiB reps=15
+drain mode: leannoemit | project: (none, parse all cols) | fnattr: off | uint64 parser: DefaultUINT64 | allow_commas: default(true)
+
+=== sequence_shredder_mode = LOCK_FREE (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        8 | 11.849 |   1.00x | min..max 11.120..12.252 (spread   10%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       16 | 16.418 |   1.39x | min..max 12.549..16.626 (spread   25%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       24 | 17.484 |   1.48x | min..max 11.218..17.891 (spread   38%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+
+=== sequence_shredder_mode = LOCKING (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        8 |  6.431 |   1.00x | min..max  6.274.. 6.791 (spread    8%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       16 |  7.852 |   1.22x | min..max  7.239.. 8.043 (spread   10%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       24 |  7.222 |   1.12x | min..max  6.881.. 7.687 (spread   11%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+########## BUF 8k SPAN 320k ##########
+nes-build: mode=host  build=/home/user/work/nebulastream-public/cmake-build-release
+formatter-scaling: file=bigstr_id_320k_500m.csv rawBuf=8KiB buffers=64025 bytes=500.2MiB reps=15
+drain mode: leannoemit | project: (none, parse all cols) | fnattr: off | uint64 parser: DefaultUINT64 | allow_commas: default(true)
+
+=== sequence_shredder_mode = LOCK_FREE (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        8 | 13.148 |   1.00x | min..max 12.334..13.944 (spread   12%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       16 | 18.971 |   1.44x | min..max 12.295..19.535 (spread   38%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       24 | 17.419 |   1.32x | min..max 12.069..21.955 (spread   57%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+
+=== sequence_shredder_mode = LOCKING (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        8 |  5.839 |   1.00x | min..max  5.606.. 6.078 (spread    8%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       16 |  7.261 |   1.24x | min..max  6.875.. 7.630 (spread   10%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       24 |  7.284 |   1.25x | min..max  6.837.. 7.409 (spread    8%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+########## BUF 8k SPAN 640k ##########
+nes-build: mode=host  build=/home/user/work/nebulastream-public/cmake-build-release
+formatter-scaling: file=bigstr_id_640k_500m.csv rawBuf=8KiB buffers=64063 bytes=500.5MiB reps=15
+drain mode: leannoemit | project: (none, parse all cols) | fnattr: off | uint64 parser: DefaultUINT64 | allow_commas: default(true)
+
+=== sequence_shredder_mode = LOCK_FREE (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        8 | 13.155 |   1.00x | min..max 12.182..13.331 (spread    9%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       16 | 18.827 |   1.43x | min..max 12.690..19.815 (spread   38%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       24 | 18.170 |   1.38x | min..max 11.588..20.962 (spread   52%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+
+=== sequence_shredder_mode = LOCKING (SIMDCSV, 1-col index, parse=id (2-field id,s projected to id -- shredder-isolated, no string copy)) ===
+  threads |   GB/s | speedup
+        8 |  7.598 |   1.00x | min..max  3.144..10.261 (spread   94%, n=15) | repeats/pass=     4299 (  6.7% of buffers)
+       16 |  7.354 |   0.97x | min..max  6.997.. 7.918 (spread   13%, n=15) | repeats/pass=        0 (  0.0% of buffers)
+       24 |  6.899 |   0.91x | min..max  6.815.. 7.083 (spread    4%, n=15) | repeats/pass=        0 (  0.0% of buffers)

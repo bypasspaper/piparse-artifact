@@ -1,0 +1,144 @@
+# SPDX-License-Identifier: Apache-2.0
+experiment:
+  name: pi_naive_stateless_w3
+  description: >
+    W3 RETAKE (staged 2026-10-03 real time; Pi clock ~6 d behind). Identical to pi_naive_stateless except
+    number_of_worker_threads 1 -> 3 = the optimized/native/Flink/Spark arms' budget on this box. The W1 run gave
+    the naive arm ONE worker while every other arm had three; in sequential mode the source thread parses inline
+    but the JSONUncompiled stringstream OUTPUT stage + sink run on the worker pool, so W1 capped serialisation at
+    one core even for a single stream (the W3 scaling ladder's N=1 point == this tier's q0: 71.7 -> 180.1 MB/s).
+    io1 is inert on the blocking path and kept so the worker block matches pi_stateless_tier. Same binary
+    (2026-08-23, commit 8217cce465) as the W1 tier -> directly comparable; W1 rows stay under the old names.
+    PI NAIVE ARM - STATELESS TIER. The NES-Naive arm was missing from the Pi campaign
+    (pi_stateless_tier / pi_stateful_tier recorded only the optimized NES arm); this fills
+    it in for all 10 stateless queries so the Pi has the same 4-arm story as the reference box.
+    NAIVE STACK (verbatim from the CORRECTED reference arm, experiments/naive_corrected_stateless.yaml):
+    single worker thread, BlockingFile source, SequentialUncompiledOldCSV input formatter in
+    sequential threading mode, JSONUncompiled output formatter, EMPTY input_parser and
+    output_parser maps (the pluggable fast parser set is bypassed entirely), and the GENUINE
+    original (de)serializers selected by NES_INPUT_CODEC=original (stod) and
+    NES_OUTPUT_CODEC=original (stringstream). generator.repeat = 1, as in the reference naive
+    arm - naive is ~50x slower than the optimized arm, so a single 3.6 GB pass is already a long
+    measurement window and 8 passes would be pointless.
+    PI DEVIATIONS vs the reference naive arm:
+      1. The x axis is worker threads = 1, not 23. This is NOT a real deviation: the reference
+         naive arm also forces number_of_worker_threads to 1 via its series override, so 23 was
+         only ever the axis label. Setting the axis to 1 makes x_value and the resolved
+         worker_threads agree instead of disagreeing.
+      2. completion_timeout_s raised 900 -> 3600. A timeout, not a performance knob; the naive
+         arm is far slower than the optimized one and 900 s is not safely above its runtime here.
+    Everything else - branch, commit, build, fnattr, 128 KiB operator buffers, COMPILER,
+    16384-buffer global pool, pin/ccx off, Monitoring sink, warm_read - is identical to both the
+    reference naive arm and pi_stateless_tier.
+    READING THE NUMBERS: input is page-cache resident, so this measures the naive parse+serialize
+    stack, not the NVMe. Compare against nes.csv (the optimized arm) query-by-query; the ratio is
+    the point, and the absolute magnitudes do not transfer from the 64 GB reference box.
+  primary_metric: throughput_mbps
+  higher_is_better: true
+  repetitions: 10
+  aggregation: median
+
+defaults:
+  system: nebulastream
+  branch: benchmark-piparse-lazyparse-fast-csv
+  mode: worker-cli
+  build: native
+  data_size: csv
+  topology: single-node
+  warm_read: true
+  completion_timeout_s: 3600
+  worker:
+    query_engine:
+      number_of_worker_threads: 3
+      number_of_io_threads: 1
+      invoke_mode_configuration: fnattr
+      pin_threads: false
+      ccx_aware_task_queues: false
+      admission_queue_size: 1024
+    default_query_execution:
+      operator_buffer_size: 131072
+      execution_mode: COMPILER
+    number_of_buffers_in_global_buffer_manager: 16384
+    dump_compilation_result: NONE
+  query_config:
+    source_type: BlockingFile
+    sink_type: Monitoring
+    input_formatter: { type: SequentialUncompiledOldCSV, threading_mode: sequential }
+    input_parser: {}
+    output_formatter: { type: JSONUncompiled }
+    output_parser: {}
+  generator:
+    repeat: 1
+  worker_env:
+    NES_MMAP_POPULATE: "1"
+    NES_INPUT_CODEC: original
+    NES_OUTPUT_CODEC: original
+
+_w_x: &w_x
+  label: "worker threads"
+  parameter: worker.query_engine.number_of_worker_threads
+  values: [3]
+
+_y: &mbps_y { metric: throughput_mbps, label: "Throughput (MB/s, csv input bytes)" }
+
+variants:
+  - name: q0
+    description: "q0: SELECT * FROM bid - full-stream forwarding / output serialization"
+    query: nexmark/matrix/bidstr_q0
+    axes: { x: *w_x }
+    y: *mbps_y
+    visualization: { type: bar_chart }
+  - name: q_project
+    description: "q_project: SELECT price FROM bid - k=1 projection"
+    query: nexmark/matrix/bidstr_qproject
+    axes: { x: *w_x }
+    y: *mbps_y
+    visualization: { type: bar_chart }
+  - name: q_route
+    description: "q_route: SELECT * WHERE channel = 'google' - filter -> full-record output"
+    query: nexmark/matrix/bidstr_qroute
+    axes: { x: *w_x }
+    y: *mbps_y
+    visualization: { type: bar_chart }
+  - name: q1
+    description: "q1: price * 908/1000 currency conversion (compute + codec)"
+    query: nexmark/matrix/bidstr_q1
+    axes: { x: *w_x }
+    y: *mbps_y
+    visualization: { type: bar_chart }
+  - name: q2_og
+    description: "q2-og: 5-way OR point selection (repeated-parse/GVN territory)"
+    query: nexmark/matrix/bidstr_q2og
+    axes: { x: *w_x }
+    y: *mbps_y
+    visualization: { type: bar_chart }
+  - name: q2_mod
+    description: "q2-mod: auctionId % 123 = 0 filter (~0.82% survivors)"
+    query: nexmark/matrix/bidstr_q2mod
+    axes: { x: *w_x }
+    y: *mbps_y
+    visualization: { type: bar_chart }
+  - name: q10
+    description: "q10: ms-epoch -> ISO-8601 datetime export (UTC)"
+    query: nexmark/matrix/bidstr_q10
+    axes: { x: *w_x }
+    y: *mbps_y
+    visualization: { type: bar_chart }
+  - name: q14
+    description: "q14: computed-float range filter"
+    query: nexmark/matrix/bidstr_q14
+    axes: { x: *w_x }
+    y: *mbps_y
+    visualization: { type: bar_chart }
+  - name: q22
+    description: "q22: unconditional CONCAT alert (string-output regime)"
+    query: nexmark/matrix/bidstr_q22
+    axes: { x: *w_x }
+    y: *mbps_y
+    visualization: { type: bar_chart }
+  - name: q_ex
+    description: "Q_ex: HOSP working example (mixed-predicate filter -> nested CONCAT, ~220 rows)"
+    query: nexmark/matrix/bidstr_qex
+    axes: { x: *w_x }
+    y: *mbps_y
+    visualization: { type: bar_chart }
