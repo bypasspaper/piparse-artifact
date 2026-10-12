@@ -2,7 +2,7 @@
 
 | component | identifier |
 | --- | --- |
-| Engine repository | `https://github.com/ANON-ACCOUNT/nebulastream-snapshot` |
+| Engine repository | `https://github.com/bypasspaper/nebulastream-snapshot` |
 | Engine branch / tag | `benchmark-piparse-lazyparse-fast-csv` @ **`piparse-artifact-v1`** = `184ec91f5051d40f8af04f0b3ffc3c0dfea7d9ab` (129 commits ahead of `main`) |
 | Engine state the numbers were measured with | `b5d757c9f6` + the uncommitted benchmark overlay (knobs default off) — identical code to the tag: the overlay is the tag's last five commits (`f3688e254d` hoisting knobs, `f6c51243a6` VARSIZED literal/eq, `309b434ef6` TOFLOAT64/TOINT64, `026df3e3ac` latency rig, `184ec91f50` aarch64 + port patch 0005) |
 | Nautilus (JIT) | overlay port `vcpkg/vcpkg-registry/ports/nautilus`: `nebulastream/nautilus` REF `85c19150d9bb7e8cca3051e67e04e76045462379`, SHA512 `a7183af0…40b9e`, patches `0001-disable-ubsan-function-call-check`, `0002-add-constant-byte-globals`, `0003-nonvolatile-mem-intrinsics`, `0004-preserve-libc-memcmp-name`, `0005-strip-eh-from-spliced-bitcode-on-aarch64`. TR host build used 0001–0004 (0005 is `#if __aarch64__`-guarded and changes nothing on x86); Pi build e used 0001–0005 |
@@ -11,7 +11,7 @@
 | Compiler / LLVM | TR host: Ubuntu clang 19.1.1, libc++, mold; JIT backend LLVM/MLIR 21.1.8 (vcpkg `llvm` overlay port = `nes-llvm-21-with-fix-173075`) |
 | TR binaries | `cmake-build-release/nes-single-node-worker/nes-single-node-worker` built 2026-10-05 18:27 (Sep-3 state + `NES_EAGER_COPY_VARSIZED` knob; anchors reproduce the 2026-08-24 ladder within 1–3 %); Sep-3 copy kept as `*.sep03` |
 | Pi binaries | build **e** (2026-10-06, image `local-piparse-inl` cf9906b2c4c2, `NES_INLINE_ON_ARM=ON`) for every per-query tier cited; `*.buildd` (inlining off) and `*.aug23` kept on the Pi. Scaling ladders and latency curves were taken with the Aug-23 binary (user decision 2026-10-06: not retaken) |
-| Benchmark harness | `https://github.com/ANON-ACCOUNT/piparse-bench-snapshot` @ **`piparse-artifact-v1.1`** = `3f98722` (= v1 `33e7603` + the two 2026-10-12 ablation overload re-run yamls; private at freeze time) |
+| Benchmark harness | `https://github.com/bypasspaper/piparse-bench-snapshot` @ **`piparse-artifact-v1.1`** = `3f98722` (= v1 `33e7603` + the two 2026-10-12 ablation overload re-run yamls; private at freeze time) |
 | Results database | `results/tr/piparse_bench.duckdb` = `piparse-bench/results/piparse_bench.duckdb` as of 2026-10-12 15:30 (adds the ablation overload re-run `20261012T150636-97b18744`, `20261012T151153-401837a8` and the getting-started smoke run `20261012T115658-3d2e5b23`) |
 | Python / tools | Python 3.12.3, uv 0.9.24, duckdb 1.5.4, matplotlib 3.11.0, numpy 2.1.3, pandas 2.2.3, pydantic 2.13.4, apache-flink 2.1.3, pyspark 3.5.9, OpenJDK 11.0.32.1, cargo 1.89.0, Docker 28.2.2 |
 | Datasets | see `data/README.md` (sizes + md5 of every file) |

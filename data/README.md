@@ -28,7 +28,7 @@ stubs in the engine tree.)
 These files are **not** on the engine's ExternalData server. They are served from a separate, anonymous data host
 (author decision 2026-10-12: the engine's the authors' university share is public NebulaStream infrastructure and stays, but nothing
 submission-specific may be hosted there). `DATA_URL=<base url> ./fetch_twins.sh` downloads the six files below by
-name into the build tree and verifies the md5s listed here. Base URL of the review copy: `DATA-URL-PLACEHOLDER`
+name into the build tree and verifies the md5s listed here. Base URL of the review copy: `https://huggingface.co/datasets/bypasspaper/bypass-artifact-data/resolve/main`
 (filled by `scripts/anonymize/push_review_repos.sh` from its `DATA_URL` environment variable, see `../README.md` §5).
 
 `bid_strings_3GB.csv` is the first **31,300,000 rows** of the NEXMark bid stream *with the two string columns

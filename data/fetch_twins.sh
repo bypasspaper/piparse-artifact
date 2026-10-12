@@ -10,7 +10,7 @@
 # $NES_BUILD_DIR/nes-systests/testdata/large/nexmark/ (the directory the query catalog's `large/nexmark/...` entries
 # resolve to). ~25 GB in total; each file is skipped when it is already present with the right md5.
 set -euo pipefail
-DATA_URL="${DATA_URL:-DATA-URL-PLACEHOLDER}"   # filled with the anonymous data host by scripts/anonymize/push_review_repos.sh (env DATA_URL)
+DATA_URL="${DATA_URL:-https://huggingface.co/datasets/bypasspaper/bypass-artifact-data/resolve/main}"   # filled with the anonymous data host by scripts/anonymize/push_review_repos.sh (env DATA_URL)
 case "$DATA_URL" in *PLACEHOLDER*) echo "DATA_URL is not set: export DATA_URL=<base url of the data host> (see data/README.md §2)"; exit 1;; esac
 NES_BUILD_DIR="${NES_BUILD_DIR:-$HOME/work/nebulastream-public/cmake-build-release}"
 DEST="$NES_BUILD_DIR/nes-systests/testdata/large/nexmark"

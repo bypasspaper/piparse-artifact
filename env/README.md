@@ -19,14 +19,14 @@ with a single reader; Pi = NES W3 + io1, Flink p=3, Spark `local[3]`.
 
 | component | version / pin |
 | --- | --- |
-| NebulaStream engine | github.com/ANON-ACCOUNT/nebulastream-snapshot, branch `benchmark-piparse-lazyparse-fast-csv`, **tag `piparse-artifact-v1`** (184ec91f5051d40f8af04f0b3ffc3c0dfea7d9ab) |
+| NebulaStream engine | github.com/bypasspaper/nebulastream-snapshot, branch `benchmark-piparse-lazyparse-fast-csv`, **tag `piparse-artifact-v1`** (184ec91f5051d40f8af04f0b3ffc3c0dfea7d9ab) |
 | Nautilus JIT | vcpkg overlay port `vcpkg/vcpkg-registry/ports/nautilus`: REF 85c19150d9bb7e8cca3051e67e04e76045462379 + patches 0001–0005 (0005 = aarch64 EH strip, inert on x86) |
 | LLVM / MLIR (JIT backend) | 21.1.8 (vcpkg `llvm` overlay port on the host route; prebuilt `nes-llvm-21-with-fix-173075` in the dev image) |
 | Host compiler (TR) | Ubuntu clang 19.1.1, libc++ (triplet `x64-linux-none-libcxx`), mold linker, CMake 3.28.3, Ninja |
 | vcpkg | manifest `vcpkg/vcpkg.json`, builtin-baseline `4334d8b4c8916018600212ab4dd4bbdc343065d1`; TR clone at f6735d5aa1 |
 | Dev container | `nebulastream/nes-development` (built from `docker/dependency/*.dockerfile`; tag = `docker/dependency/hash_dependencies.sh` of the checkout; local TR image digest `sha256:ed44856bf534bf86e18c5e06c7cf0522a0ec7298edc0b9553af508dfc0d71715`) |
 | Pi image | `nebulastream/nes-development:local-piparse` (arm64 dev image, nautilus prebuilt with patches 0001–0003) → **`local-piparse-inl`** (image id cf9906b2c4c2) = the same image with nautilus rebuilt from `pi/nautilus-85c19150-p0001-0005.tar.gz` by `pi/build_nautilus_p0005.sh` |
-| Benchmark harness | github.com/ANON-ACCOUNT/piparse-bench-snapshot, **tag `piparse-artifact-v1`** (33e76034c04bb255b9d11dc3500b3afdc49a718c); Python 3.12.3, uv 0.9.24 (`uv sync`), duckdb 1.5.4, matplotlib 3.11.0, pydantic 2.13.4 |
+| Benchmark harness | github.com/bypasspaper/piparse-bench-snapshot, **tag `piparse-artifact-v1`** (33e76034c04bb255b9d11dc3500b3afdc49a718c); Python 3.12.3, uv 0.9.24 (`uv sync`), duckdb 1.5.4, matplotlib 3.11.0, pydantic 2.13.4 |
 | TCP generator | `piparse-bench/generator` (Rust, cargo 1.89.0; `cargo build --release` → `target/release/tcp-generator`) |
 | Flink arm | PyFlink `apache-flink 2.1.3` (pin `>=2.0,<2.2`), OpenJDK 11.0.32.1, custom sinks `piparse-bench/flink-ext` (`./build.sh`, javac against the venv's own Flink jars) |
 | Spark arm | PySpark 3.5.9, custom file-microbatch source `piparse-bench/spark-ext` (`./build.sh`) |
@@ -67,7 +67,7 @@ under load, governor `performance` or `ondemand`.
 ## 5. Benchmark harness
 
 ```
-git clone https://github.com/ANON-ACCOUNT/piparse-bench-snapshot && cd piparse-bench && git checkout piparse-artifact-v1
+git clone https://github.com/bypasspaper/piparse-bench-snapshot && cd piparse-bench && git checkout piparse-artifact-v1
 uv sync                                   # .venv with duckdb/matplotlib/pydantic; add: uv pip install -e ".[flink]" for Flink
 (cd generator && cargo build --release)   # TCP generator (many-source TCP experiments)
 (cd flink-ext && ./build.sh); (cd spark-ext && ./build.sh)   # only for the Flink / Spark arms

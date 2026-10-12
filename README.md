@@ -8,8 +8,8 @@ own copies.
 
 | component | where | frozen at |
 | --- | --- | --- |
-| Prototype system (NebulaStream engine with the lazy-(de)serialization formatters, the JIT context layer and the lock-free sequence shredder) | `github.com/ANON-ACCOUNT/nebulastream-snapshot`, branch `benchmark-piparse-lazyparse-fast-csv` | tag **`piparse-artifact-v1`** (`184ec91f50`) |
-| Benchmark harness (YAML experiments → worker/Flink/Spark runs → DuckDB → figures) | `github.com/ANON-ACCOUNT/piparse-bench-snapshot` | tag **`piparse-artifact-v1`** (`33e7603`) |
+| Prototype system (NebulaStream engine with the lazy-(de)serialization formatters, the JIT context layer and the lock-free sequence shredder) | `github.com/bypasspaper/nebulastream-snapshot`, branch `benchmark-piparse-lazyparse-fast-csv` | tag **`piparse-artifact-v1`** (`184ec91f50`) |
+| Benchmark harness (YAML experiments → worker/Flink/Spark runs → DuckDB → figures) | `github.com/bypasspaper/piparse-bench-snapshot` | tag **`piparse-artifact-v1`** (`33e7603`) |
 | This package: environment, data recipes, per-figure experiments, raw results, figure scripts | this repository | 2026-10-12 |
 
 `MANIFEST.md` lists every exact version, hash and binary; `env/README.md` the hardware and software;
@@ -46,7 +46,7 @@ a `make_figure.py` that regenerates it from the shipped data, and a `run.sh` wit
    ```
 2. **Build the engine** at the tag (see `env/README.md` §3; host or container route):
    ```
-   git clone https://github.com/ANON-ACCOUNT/nebulastream-snapshot nes && cd nes
+   git clone https://github.com/bypasspaper/nebulastream-snapshot nes && cd nes
    git checkout -B benchmark-piparse-lazyparse-fast-csv piparse-artifact-v1
    NES_SRC=$PWD NES_BUILD_DIR=$PWD/cmake-build-release ../env/tr/build_release.sh      # add NES_DEV_IMAGE=... for the container route
    ```
@@ -61,7 +61,7 @@ a `make_figure.py` that regenerates it from the shipped data, and a `run.sh` wit
    `NES_SRC=... NES_BUILD_DIR=... data/fetch_testdata.sh`
 5. **Install the harness and run the smoke experiment (~1 min):**
    ```
-   git clone https://github.com/ANON-ACCOUNT/piparse-bench-snapshot && cd piparse-bench && git checkout piparse-artifact-v1 && uv sync
+   git clone https://github.com/bypasspaper/piparse-bench-snapshot && cd piparse-bench && git checkout piparse-artifact-v1 && uv sync
    pkill -9 -x main; PBENCH_KEEP_LOGS=1 uv run python bench.py run <artifact>/scripts/smoke_q0_small.yaml \
        --build-dir $NES_BUILD_DIR --worker-port 9099
    ```
@@ -127,7 +127,7 @@ submission (no link shortener, not referenced from any non-anonymous page):
 ```
 scripts/anonymize/make_anonymous_snapshots.sh ../piparse-anon-snapshots   # engine tag + harness tag → scrubbed single-commit trees
 gh auth login                                                             # as the anonymous account (gh keeps several accounts)
-scripts/anonymize/push_review_repos.sh <anonymous-account>                # fills ANON-ACCOUNT in the review copy, creates + pushes
+scripts/anonymize/push_review_repos.sh <anonymous-account>                # fills bypasspaper in the review copy, creates + pushes
                                                                           # piparse-artifact, nebulastream-snapshot, piparse-bench-snapshot
 gh auth switch --user <your account>
 ```
@@ -150,7 +150,7 @@ three things to you:
    (~25 GB, md5s in `data/README.md`) — must **not** go there. Upload them to an anonymous host that serves plain
    HTTPS downloads by file name (a Hugging Face dataset repository under a throwaway account handles multi-GB files
    for free; GitHub release assets would need 2 GB splits) and pass the base URL as `DATA_URL=…` to
-   `scripts/anonymize/push_review_repos.sh`, which fills the `DATA-URL-PLACEHOLDER` in the review copy's `data/fetch_twins.sh`
+   `scripts/anonymize/push_review_repos.sh`, which fills the `https://huggingface.co/datasets/bypasspaper/bypass-artifact-data/resolve/main` in the review copy's `data/fetch_twins.sh`
    and `data/README.md` (the URL itself stays out of this repository). Do not use a link shortener.
 
 After the review period the de-anonymised version (this repository) replaces the anonymous copy.
